@@ -1,1 +1,0 @@
-(()=>{"use strict";document.querySelectorAll(".js-answer").forEach((e=>{e.addEventListener("click",(()=>{e.classList.add("is-selected")}))}))})();

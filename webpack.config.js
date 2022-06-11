@@ -1,9 +1,7 @@
 const path = require('path')
-// const globule = require('globule')
-const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 /**
  * 設定
@@ -13,8 +11,6 @@ const dir = {
   dist: './',
   assets: 'assets'
 }
-
-const distDir = dir.dist ? dir.dist : dir.assets
 const baseDir = './'
 const PROXY = null
 
@@ -29,11 +25,7 @@ const settings = {
  * エントリーポイントの指定
  */
 const entryPoints = {
-  main: [ `./${dir.src}/scripts/main.js`, `./${dir.src}/styles/common.css` ]
-}
-
-if (settings.sass[0]) {
-  entryPoints.main[1] = `./${dir.src}/styles/common.scss`
+  main: [ `./${dir.src}/styles/common.scss` ]
 }
 
 /**
@@ -53,52 +45,17 @@ module.exports = (env, argv) => {
   const isDev = process.env.NODE_ENV !== "production"
 
   return {
+    // entry: `./${dir.src}/styles/common.scss`,
     entry: {
       ...entryPoints
     },
     output: {
       path: path.resolve(__dirname, dir.dist),
-      filename: `./${dir.assets}/scripts/[name].bundle.js`
     },
     mode: argv.mode,
-    devtool: argv.mode === 'production' ? false : 'source-map',
     cache: true,
-    optimization: {
-      minimize: true,
-      minimizer: [
-        new TerserPlugin({
-          // 並列処理の実行を有効化
-          // 同時に実行するを数値を設定
-          // parallel: 4,
-          // // swcを有効化
-          // // minify: TerserPlugin.swcMinify,
-          // // Minify Optionsを設定
-          // terserOptions: {
-          //   // 最適化
-          //   compress: {
-          //     ecma: 5,
-          //     warnings: false,
-          //     comparisons: false,
-          //     inline: 2,
-          //   },
-          //   // 変数名を短く
-          //   mangle: {
-          //     safari10: true,
-          //   },
-          // },
-        }),
-      ],
-    },
     module: {
       rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          // loader: 'babel-loader',
-          // options: {
-          //   presets: [ '@babel/preset-env' ]
-          // }
-        },
         {
           test: /\.(css|s[ac]ss)$/,
           use: [
@@ -121,7 +78,6 @@ module.exports = (env, argv) => {
               options: {
                 implementation: require('sass'),
                 sassOptions: {
-                  // fiber: require('fibers'),
                   outputStyle: settings.sass[1].compressed ? 'compressed' : 'expanded',
                 },
                 sourceMap: isDev
@@ -129,13 +85,6 @@ module.exports = (env, argv) => {
             }
           ]
         },
-        {
-          test: /.(png|svg|jpe?g|gif)$/,
-          type: "asset/resource",
-          generator: {
-            filename: `./${dir.assets}/img/[name].[ext]`
-          }
-        }
       ]
     },
 
@@ -144,19 +93,7 @@ module.exports = (env, argv) => {
       new MiniCssExtractPlugin({
         filename: `./${dir.assets}/styles/common.css`
       }),
-      new CopyPlugin({
-        patterns: [
-          {
-            from: `${dir.src}/img/`,
-            to: path.resolve(__dirname, `${dir.dist}${dir.assets}/img/`),
-          },
-        ],
-      }),
-    ],
-    resolve: {
-      extensions: [ '.js', '.json' ]
-    },
-    // ES5(IE11等)向けの指定
-    // target: [ 'web', 'es5' ]
+      new FixStyleOnlyEntriesPlugin()
+    ]
   }
 }
