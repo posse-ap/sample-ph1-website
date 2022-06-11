@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITクイズ | POSSE 初めてのWeb制作</title>
+  <!-- スタイルシート読み込み -->
+  <link rel="stylesheet" href="../assets/styles/common.css">
+  <!-- Google Fonts読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="../assets/scripts/main.bundle.js" defer></script>
+</head>
+
+<body>
+  <header class="l-header">
+    <div class="l-header__logo"><img src="../assets/img/logo.svg" alt="POSSE"></div>
+    <nav class="l-header__nav">
+      <ul class="l-header__nav__list">
+        <li class="l-header__nav__item">
+          <a href="../" class="l-header__nav__item__link">トップページ</a>
+        </li>
+        <li class="l-header__nav__item">
+          <a href="./" class="l-header__nav__item__link">クイズ</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="l-header__sns p-sns">
+      <li class="p-sns__item">
+        <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer" class="p-sns__item__link">
+          <i class="icon-twitter" aria-label="Twitter"></i>
+        </a>
+      </li>
+      <li class="p-sns__item">
+        <a href="https://www.instagram.com/posse_programming/" target="_blank" rel="noopener noreferrer"
+          class="p-sns__item__link">
+          <i class="icon-instagram" aria-label="instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+  <!-- /.l-header -->
+
+  <main class="l-main">
+    <section class="c-hero p-quiz__hero">
+      <div class="l-container">
+        <h1 class="c-hero__title">
+          <span class="c-hero__title__label">POSSE課題</span>
+          <span class="c-hero__title__inline">ITクイズ</span>
+        </h1>
+      </div>
+    </section>
+    <!-- /.p-quiz-hero -->
+
+    <div class="p-quiz__container l-container">
+      <section class="p-quiz__box js-quiz">
+        <div class="p-quiz__box__question">
+          <h2 class="p-quiz__box__question__title">
+            <span class="p-quiz__box__label">Q1</span>
+            <span class="p-quiz__box__question__title__text">日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？</span>
+          </h2>
+          <figure class="p-quiz__box__question__image">
+            <img src="../assets/img/quiz/img-quiz01.png" alt="">
+          </figure>
+        </div>
+        <div class="p-quiz__box__answer">
+          <span class="p-quiz__box__label p-quiz__box__label--accent">A</span>
+          <ul class="p-quiz__box__answer__list">
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                約28万人<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                約79万人<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                約183万人<i class="icon-arrow"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="p-quiz__box__answer__correct is-correct">
+            <p class="p-quiz__box__answer__correct__title js-correctAnswerTitle">正解！</p>
+            <p class="p-quiz__box__answer__correct__content">
+              <span class="p-quiz__box__answer__correct__content__label">A</span>
+              <span class="js-correctAnswerText">約28万人</span>
+            </p>
+          </div>
+        </div>
+        <small class="p-quiz__box__note">
+          <i class="icon-note"></i>経済産業省 2019年3月 － IT 人材需給に関する調査
+        </small>
+      </section>
+      <!-- ./p-quiz__box -->
+
+      <section class="p-quiz__box js-quiz">
+        <div class="p-quiz__box__question">
+          <h2 class="p-quiz__box__question__title">
+            <span class="p-quiz__box__label">Q2</span>
+            <span
+              class="p-quiz__box__question__title__text">既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？</span>
+          </h2>
+          <figure class="p-quiz__box__question__image">
+            <img src="../assets/img/quiz/img-quiz02.png" alt="">
+          </figure>
+        </div>
+        <div class="p-quiz__box__answer">
+          <span class="p-quiz__box__label p-quiz__box__label--accent">A</span>
+          <ul class="p-quiz__box__answer__list">
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                INTECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                BIZZTECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                X-TECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="p-quiz__box__answer__correct is-incorrect">
+            <p class="p-quiz__box__answer__correct__title js-correctAnswerTitle">不正解...</p>
+            <p class="p-quiz__box__answer__correct__content">
+              <span class="p-quiz__box__answer__correct__content__label">A</span>
+              <span class="js-correctAnswerText">約28万人</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ./p-quiz__box -->
+
+      <section class="p-quiz__box js-quiz">
+        <div class="p-quiz__box__question">
+          <h2 class="p-quiz__box__question__title">
+            <span class="p-quiz__box__label">Q2</span>
+            <span
+              class="p-quiz__box__question__title__text">既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？</span>
+          </h2>
+          <figure class="p-quiz__box__question__image">
+            <img src="../assets/img/quiz/img-quiz02.png" alt="">
+          </figure>
+        </div>
+        <div class="p-quiz__box__answer">
+          <span class="p-quiz__box__label p-quiz__box__label--accent">A</span>
+          <ul class="p-quiz__box__answer__list">
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                INTECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                BIZZTECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+            <li class="p-quiz__box__answer__item">
+              <button class="p-quiz__box__answer__button js-answer">
+                X-TECH<i class="icon-arrow"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="p-quiz__box__answer__correct">
+            <p class="p-quiz__box__answer__correct__title js-correctAnswerTitle"></p>
+            <p class="p-quiz__box__answer__correct__content">
+              <span class="p-quiz__box__answer__correct__content__label">A</span>
+              <span class="js-correctAnswerText"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ./p-quiz__box -->
+    </div>
+  </main>
+
+  <div class="p-line">
+    <div class="l-container">
+      <div class="p-line__body">
+        <div class="p-line__body__inner">
+          <h2 class="c-heading -light p-line__title"><i class="icon-line" aria-label="LINE"></i>POSSE 公式LINE</h2>
+          <div class="p-line__content">
+            <p>公式LINEにてご質問を随時受け付けております。<br>詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので<br>下記ボタンより友達追加をお願いします！</p>
+          </div>
+          <div class="p-line__footer">
+            <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
+              class="p-line__button">LINE追加<i class="icon-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.l-line -->
+
+  <footer class="l-footer">
+    <div class="c-fixed-line">
+      <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
+        class="c-fixed-line__link">
+        <i class="icon-line"></i>
+        <p class="c-fixed-line__link__text">POSSE公式LINEで<br>最新情報をGET！</p>
+        <i class="icon-link"></i>
+      </a>
+    </div>
+    <div class="l-footer__inner">
+      <div class="l-footer__siteinfo">
+        <span class="l-footer__logo">
+          <img src="../assets/img/logo.svg" alt="POSSE" width="202" height="39.22">
+        </span>
+        <a href="https://posse-ap.com/" target="_blank" rel="noopener noreferrer"
+          class="l-footer__siteinfo__link">POSSE公式サイト</a>
+      </div>
+      <div class="l-footer__sns">
+        <ul class="p-sns__list l-footer__sns__list">
+          <li class="p-sns__item">
+            <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer"
+              class="p-sns__item__link">
+              <i class="icon-twitter" aria-label="Twitter"></i>
+            </a>
+          </li>
+          <li class="p-sns__item">
+            <a href="https://www.instagram.com/posse_programming/" target="_blank" rel="noopener noreferrer"
+              class="p-sns__item__link">
+              <i class="icon-instagram" aria-label="instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="l-footer__copyright">
+      <small lang="en">©︎2022 POSSE</small>
+    </div>
+  </footer>
+  <!-- /.l-footer -->
+
+</body>
+
+</html>

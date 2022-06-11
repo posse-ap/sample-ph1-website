@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+// /**
+// * File Name : common.css
+// * Version : 1.0
+// * Description : POSSE web site
+// * Since : 2022-6-10
+// *
+// * ---- Table of Contents ----
+// *
+// * 1.0 - Foundation
+// *    1.1 - Reset
+// *    1.2 - Default Style
+// *
+// * 2.0 - Layout
+// *    2.1 - Main
+// *    2.2 - Container
+// *    2.3 - Header
+// *    2.4 - Footer
+// *
+// * 3.0 - Object
+// *    3.1 - Component
+// *    3.2 - Project
+// *    3.3 - Utility
+// *
+// * 4.0 - Animation
+// *    4.1 - Fade Out
+// *
+// */
+
+///* ===================================================
+//  1.0 - Foundation
+//=================================================== */
+
+///*
+//  1.1 - Reset
+//*/
+@use "Foundation/reset";
+///*
+//  1.2 - Default Style
+//*/
+@use "Foundation/base";
+
+///* ===================================================
+//  2.0 - Layout
+//=================================================== */
+
+///*
+//  2.1 - Main
+//*/
+@use "Layout/l-main";
+///*
+//  2.2 - Container
+//*/
+@use "Layout/l-container";
+
+///*
+//  2.3 - Header
+//*/
+@use "Layout/l-header";
+
+///*
+//  2.4 - Footer
+//*/
+@use "Layout/l-footer";
+
+///* ===================================================
+//  3.0 - Object
+//=================================================== */
+
+///*
+//  3.1 - Component
+//--------------------------------------- */
+@use "Object/Component/c-heading";
+@use "Object/Component/c-fixed-line";
+@use "Object/Component/c-hero";
+
+///*
+//  3.2 - Project
+//--------------------------------------- */
+@use "Object/Project/p-sns";
+@use "Object/Project/p-top";
+@use "Object/Project/p-about";
+@use "Object/Project/p-quiz";
+@use "Object/Project/p-line";
+
+///*
+//  3.3 - Utility
+//--------------------------------------- */
