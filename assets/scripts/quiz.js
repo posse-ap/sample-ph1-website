@@ -39,8 +39,12 @@
     })
   }
   // trueかfalseで出力する文字列を出し分ける
-  const setTitle = boolean => boolean ? '正解！' : '不正解...'
-  const setClassName = boolean => boolean ?  'is-correct' : 'is-incorrect';
+  const setTitle = (target, isCorrect) => {
+    target.innerText = isCorrect ? '正解！' : '不正解...';
+  }
+  const setClassName = (target, isCorrect) => {
+    target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
+  }
 
   // 各問題の中での処理
   allQuiz.forEach(quiz => {
@@ -53,18 +57,19 @@
     answers.forEach(answer => {
       answer.addEventListener('click', () => {
         answer.classList.add('is-selected');
-        const selectedAnswer = Number(answer.getAttribute('data-answer'))
+        const selectedAnswer = Number(answer.getAttribute('data-answer'));
 
         // 全てのボタンを非活性化
         setDisabled(answers);
+
         // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
-        const checkCorrect = CORRECT_ANSWERS[selectedQuiz].index === selectedAnswer
+        const isCorrect = CORRECT_ANSWERS[selectedQuiz].index === selectedAnswer;
 
         // 回答欄にテキストやclass名を付与
-        answerTitle.innerText = setTitle(checkCorrect);
         answerText.innerText = CORRECT_ANSWERS[selectedQuiz].value;
-        answerBox.classList.add(setClassName(checkCorrect));
+        setTitle(answerTitle, isCorrect);
+        setClassName(answerBox, isCorrect);
       })
     })
-  });
+  })
 }
