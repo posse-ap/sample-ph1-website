@@ -1,6 +1,6 @@
-@use '../../Foundation/variables' as *;
+@use '../../foundation/variables' as *;
 
-.c-fixed-line {
+.p-fixedLine {
   position: fixed;
   right: 16px;
   bottom: 16px;
@@ -13,11 +13,11 @@
     align-items: center;
     box-shadow: 4px 4px 20px rgba(#000, .15);
 
-    .icon-line {
+    .u-icon__line {
       font-size: 36px;
     }
 
-    .icon-link {
+    .u-icon__link {
       font-size: 18px;
       color: #fff;
       margin-left: 35px;

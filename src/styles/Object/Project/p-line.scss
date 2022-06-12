@@ -1,4 +1,4 @@
-@use '../../Foundation/variables' as *;
+@use '../../foundation/variables' as *;
 
 .p-line {
   margin-top: 144px;
@@ -31,7 +31,7 @@
     justify-content: center;
     gap: 8px;
 
-    .icon-line {
+    .u-icon__line {
       font-size: 40px;
     }
   }
@@ -64,7 +64,7 @@
     position: relative;
     padding: 12px;
 
-    .icon-link {
+    .u-icon__link {
       position: absolute;
       top: 50%;
       right: 20px;

@@ -35,11 +35,12 @@
 ///*
 //  1.1 - Reset
 //*/
-@use "Foundation/reset";
+@use "foundation/reset";
 ///*
 //  1.2 - Default Style
 //*/
-@use "Foundation/base";
+@use "foundation/fonts";
+@use "foundation/base";
 
 ///* ===================================================
 //  2.0 - Layout
@@ -48,21 +49,21 @@
 ///*
 //  2.1 - Main
 //*/
-@use "Layout/l-main";
+@use "layout/l-main";
 ///*
 //  2.2 - Container
 //*/
-@use "Layout/l-container";
+@use "layout/l-container";
 
 ///*
 //  2.3 - Header
 //*/
-@use "Layout/l-header";
+@use "layout/l-header";
 
 ///*
 //  2.4 - Footer
 //*/
-@use "Layout/l-footer";
+@use "layout/l-footer";
 
 ///* ===================================================
 //  3.0 - Object
@@ -71,19 +72,30 @@
 ///*
 //  3.1 - Component
 //--------------------------------------- */
-@use "Object/Component/c-heading";
-@use "Object/Component/c-fixed-line";
-@use "Object/Component/c-hero";
 
 ///*
 //  3.2 - Project
 //--------------------------------------- */
-@use "Object/Project/p-sns";
-@use "Object/Project/p-top";
-@use "Object/Project/p-about";
-@use "Object/Project/p-quiz";
-@use "Object/Project/p-line";
+// common
+@use "object/project/p-header";
+@use "object/project/p-footer";
+@use "object/project/p-fixedLine";
+@use "object/project/p-heading";
+@use "object/project/p-hero";
+@use "object/project/p-sns";
+@use "object/project/p-line";
+
+// top page
+@use "object/project/p-top-container";
+@use "object/project/p-top-hero";
+@use "object/project/p-top-about";
+
+// quiz page
+@use "object/project/p-quiz-hero";
+@use "object/project/p-quiz-container";
+@use "object/project/p-quiz-box";
 
 ///*
 //  3.3 - Utility
 //--------------------------------------- */
+@use "object/utility/u-icon";

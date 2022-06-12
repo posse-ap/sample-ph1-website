@@ -1,21 +1,11 @@
-@use '../../Foundation/variables' as *;
+@use '../../foundation/variables' as *;
 
-.p-quiz {
-  &__hero {
-    background: url(../img/quiz/bg-hero.jpg) center center / cover;
-  }
-
-  &__container {
+.p-quiz-box {
+  &:not(:first-of-type) {
     margin-top: 120px;
   }
 
-  &__box {
-    &:not(:first-of-type) {
-      margin-top: 120px;
-    }
-  }
-
-  &__box__label {
+  &__label {
     display: inline-block;
     line-height: 1.5;
     font-size: 36px;
@@ -31,11 +21,11 @@
     }
   }
 
-  &__box__question {
+  &__question {
 
   }
 
-  &__box__question__title__text {
+  &__question__title__text {
     display: block;
     font-size: 36px;
     font-weight: bold;
@@ -43,23 +33,23 @@
     margin-top: 24px;
   }
 
-  &__box__question__image {
+  &__question__image {
     max-width: 718px;
     margin: 64px auto 0;
   }
 
-  &__box__answer {
+  &__answer {
     margin-top: 64px;
   }
 
-  &__box__answer__list {
+  &__answer__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 16px;
   }
 
-  &__box__answer__button {
+  &__answer__button {
     border: solid 5px $color-gray-light;
     border-radius: 8px;
     font-size: 18px;
@@ -71,22 +61,28 @@
     align-items: center;
     width: 100%;
 
-    .icon-arrow {
+    .u-icon__arrow {
       font-size: 16px;
       margin-left: auto;
+    }
+
+    &:disabled {
+      .u-icon__arrow {
+        display: none;
+      }
     }
 
     &.is-selected {
       border-color: $color-primary;
       background-color: $color-primary-light;
 
-      .icon-arrow {
+      .u-icon__arrow {
         display: none;
       }
     }
   }
 
-  &__box__note {
+  &__note {
     margin-top: 16px;
     display: block;
     background-color: $color-gray-lightest;
@@ -100,7 +96,7 @@
     border-radius: 8px;
   }
 
-  &__box__answer__correct {
+  &__answer__correct {
     display: none;
     margin-top: 16px;
     background-color: $color-accent-light;
@@ -117,7 +113,7 @@
     }
   }
 
-  &__box__answer__correct__title {
+  &__answer__correct__title {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.5;
@@ -132,7 +128,7 @@
     }
   }
 
-  &__box__answer__correct__content {
+  &__answer__correct__content {
     font-size: 18px;
     display: flex;
     line-height: 1.8;
@@ -142,7 +138,7 @@
     margin-top: 16px;
   }
 
-  &__box__answer__correct__content__label {
+  &__answer__correct__content__label {
     font-family: $font-english;
     font-size: 24px;
   }

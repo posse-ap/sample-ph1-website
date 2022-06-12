@@ -12,7 +12,6 @@ const dir = {
   assets: 'assets'
 }
 const baseDir = './'
-const PROXY = null
 
 const settings = {
   sass: [

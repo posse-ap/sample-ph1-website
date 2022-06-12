@@ -5,33 +5,5 @@
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  padding: 15px $padding;
-  align-items: center;
-  background-color: $color-light;
   z-index: map-get($z-index, header);
-
-  &__logo {
-    width: 148px;
-  }
-
-  &__nav {
-    margin-left: auto;
-  }
-
-  &__nav__list {
-    display: flex;
-    gap: 32px;
-  }
-
-  &__nav__item__link {
-    color: $color-gray-dark;
-    font-size: 14px;
-    letter-spacing: .1em;
-    font-weight: bold;
-  }
-
-  &__sns {
-    margin-left: 32px;
-  }
 }

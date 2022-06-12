@@ -1,23 +1,14 @@
-@use '../../Foundation/variables' as *;
+@use '../../foundation/variables' as *;
 
-.p-top {
-  &__container {
-    margin-top: 96px;
-  }
-
-  // hero
-  &__hero {
-    padding: 0 $padding;
-  }
-
-  &__hero__inner {
+.p-top-hero {
+  &__inner {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     position: relative;
   }
 
-  &__hero__body {
+  &__body {
     background-color: $color-primary-light;
     border-radius: 24px;
     padding: 50px 62px;
@@ -27,14 +18,14 @@
     align-self: center;
   }
 
-  &__hero__body__title {
+  &__body__title {
     color: $color-primary;
     font-size: 16px;
     line-height: 1.8;
     font-weight: bold;
   }
 
-  &__hero__body__catchcopy {
+  &__body__catchcopy {
     font-size: 60px;
     line-height: 1.3333;
     letter-spacing: .05em;
@@ -43,7 +34,7 @@
     display: inline-block;
   }
 
-  &__hero__image {
+  &__image {
     max-height: 680px;
     margin-left: -125px;
     margin-right: calc(50% - 50vw);
@@ -59,7 +50,7 @@
     }
   }
 
-  &__hero__scroll {
+  &__scroll {
     position: absolute;
     left: 32px;
     bottom: 24px;
