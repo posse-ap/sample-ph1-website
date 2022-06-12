@@ -1,0 +1,145 @@
+@use '../../foundation/variables' as *;
+
+.p-quiz-box {
+  &:not(:first-of-type) {
+    margin-top: 120px;
+  }
+
+  &__label {
+    display: inline-block;
+    line-height: 1.5;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: $font-english;
+    color: $color-light;
+    background-color: $color-primary;
+    border-radius: 8px;
+    padding: 8px 16px;
+
+    &--accent {
+      background-color: $color-accent;
+    }
+  }
+
+  &__question {
+
+  }
+
+  &__question__title__text {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 24px;
+  }
+
+  &__question__image {
+    max-width: 718px;
+    margin: 64px auto 0;
+  }
+
+  &__answer {
+    margin-top: 64px;
+  }
+
+  &__answer__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  &__answer__button {
+    border: solid 5px $color-gray-light;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.8;
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .u-icon__arrow {
+      font-size: 16px;
+      margin-left: auto;
+    }
+
+    &:disabled {
+      .u-icon__arrow {
+        display: none;
+      }
+    }
+
+    &.is-selected {
+      border-color: $color-primary;
+      background-color: $color-primary-light;
+
+      .u-icon__arrow {
+        display: none;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 16px;
+    display: block;
+    background-color: $color-gray-lightest;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: bold;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+  }
+
+  &__answer__correct {
+    display: none;
+    margin-top: 16px;
+    background-color: $color-accent-light;
+    padding: 24px 40px;
+    border-radius: 8px;
+
+    &.is-correct {
+      display: block;
+    }
+
+    &.is-incorrect {
+      display: block;
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__answer__correct__title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: .05em;
+
+    .is-correct & {
+      color: $color-accent;
+    }
+
+    .is-incorrect & {
+      color: $color-primary;
+    }
+  }
+
+  &__answer__correct__content {
+    font-size: 18px;
+    display: flex;
+    line-height: 1.8;
+    gap: 18px;
+    align-items: baseline;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+
+  &__answer__correct__content__label {
+    font-family: $font-english;
+    font-size: 24px;
+  }
+}

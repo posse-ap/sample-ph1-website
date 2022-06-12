@@ -1,0 +1,23 @@
+@use '../../foundation/variables' as *;
+
+.p-heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: .05em;
+
+  &.-light {
+    color: $color-light;
+  }
+
+  &__caption {
+    letter-spacing: initial;
+    font-family: $font-english;
+    font-size: 14px;
+    color: $color-primary;
+    line-height: 1.8;
+    display: block;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,35 @@
+@use '../../foundation/variables' as *;
+
+.p-footer {
+  text-align: center;
+  margin-top: 80px;
+
+  &__logo {
+    display: block;
+  }
+
+  &__siteinfo__link {
+    display: inline-block;
+    font-size: 14px;
+    color: $color-gray-dark;
+    line-height: 1.8;
+    margin-top: 24px;
+  }
+
+  &__sns__list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  &__copyright {
+    border-top: solid 1px $color-gray-light;
+    color: $color-gray-dark;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    font-family: $font-english;
+    padding: 38px 24px 33px;
+  }
+}
