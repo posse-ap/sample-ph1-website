@@ -1,0 +1,36 @@
+@use '../../foundation/variables' as *;
+
+.p-fixedLine {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+
+  &__link {
+    background-color: #5FDF5B;
+    border-radius: 16px;
+    display: flex;
+    padding: 22px 20px 22px 24px;
+    align-items: center;
+    box-shadow: 4px 4px 20px rgba(#000, .15);
+
+    .u-icon__line {
+      font-size: 36px;
+    }
+
+    .u-icon__link {
+      font-size: 18px;
+      color: #fff;
+      margin-left: 35px;
+    }
+  }
+
+  &__link__text {
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: left;
+    color: $color-light;
+    margin-left: 13px;
+  }
+}
