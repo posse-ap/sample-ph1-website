@@ -690,6 +690,7 @@ body {
   display: block;
   display: flex;
   font-size: 18px;
+  font-style: normal;
   font-weight: bold;
   gap: 16px;
   line-height: 1.8;
