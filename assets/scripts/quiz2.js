@@ -1,7 +1,18 @@
 'use strict';
 
 {
-  // 回答一覧
+  /**
+   * @typedef QUIZ
+   * @property {number} correctNumber 問題番号
+   * @property {string | undefined} note ノート
+   * @property {string} question 問題文
+   * @property {string[]} answers 回答の配列
+   */
+
+  /**
+   * @description 問題と回答の定数
+   * @type {QUIZ[]}
+   */
   const ALL_QUIZ = [
     {
       question: '日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？',
@@ -39,11 +50,23 @@
   ];
 
   /**
-   * クイズ１つ１つのHTMLを生成するための関数
+   * @description クイズコンテナーの取得
+   * @type {HTMLElement}
+   */
+  const quizContainer = document.getElementById('js-quizContainer');
+
+  /**
+   * @description クイズ１つ１つのHTMLを生成するための関数
+   * @param quizItem { QUIZ }
+   * @param questionNumber { number }
+   * @returns {string}
    */
   const createQuizHtml = (quizItem, questionNumber) => {
 
-    // 回答の生成
+    /**
+     * @description 回答の生成
+     * @type {string}
+     */
     const answersHtml = quizItem.answers.map((answer, answerIndex) => `<li class="p-quiz-box__answer__item">
         <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">
           ${answer}<i class="u-icon__arrow"></i>
@@ -84,31 +107,51 @@
     </section>`
   }
 
-  const quizContainer = document.getElementById('js-quizContainer');
-
-  // 生成したクイズのHTMLを #js-quizContainer に挿入
+  /**
+   * @type {string}
+   * @description 生成したクイズのHTMLを #js-quizContainer に挿入
+   */
   quizContainer.innerHTML = ALL_QUIZ.map((quizItem, index) => {
     return createQuizHtml(quizItem, index)
   }).join('')
 
-  // すべての問題を取得
+  /**
+   * @type {NodeListOf<Element>}
+   * @description すべての問題を取得
+   */
   const allQuiz  = document.querySelectorAll('.js-quiz');
 
-  // buttonタグにdisabledを付与
+  /**
+   * @description buttonタグにdisabledを付与
+   * @param answers {NodeListOf<Element>}
+   */
   const setDisabled = answers => {
     answers.forEach(answer => {
       answer.disabled = true;
     })
   }
-  // trueかfalseで出力する文字列を出し分ける
+
+  /**
+   * @description trueかfalseで出力する文字列を出し分ける
+   * @param target {Element}
+   * @param isCorrect {boolean}
+   */
   const setTitle = (target, isCorrect) => {
     target.innerText = isCorrect ? '正解！' : '不正解...';
   }
+
+  /**
+   * @description trueかfalseでクラス名を付け分ける
+   * @param target {Element}
+   * @param isCorrect {boolean}
+   */
   const setClassName = (target, isCorrect) => {
     target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
   }
 
-  // 各問題の中での処理
+  /**
+   * 各問題の中での処理
+   */
   allQuiz.forEach(quiz => {
     const answers = quiz.querySelectorAll('.js-answer');
     const selectedQuiz = Number(quiz.getAttribute('data-quiz'));
@@ -119,14 +162,14 @@
     answers.forEach(answer => {
       answer.addEventListener('click', () => {
         answer.classList.add('is-selected');
-        const selectedAnswer = Number(answer.getAttribute('data-answer'));
+        const selectedAnswerNumber = Number(answer.getAttribute('data-answer'));
 
         // 全てのボタンを非活性化
         setDisabled(answers);
 
         // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
         const correctNumber = ALL_QUIZ[selectedQuiz].correctNumber
-        const isCorrect = correctNumber === selectedAnswer;
+        const isCorrect = correctNumber === selectedAnswerNumber;
 
         // 回答欄にテキストやclass名を付与
         answerText.innerText = ALL_QUIZ[selectedQuiz].answers[correctNumber];
