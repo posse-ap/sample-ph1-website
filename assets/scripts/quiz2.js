@@ -42,23 +42,21 @@
    * クイズ１つ１つのHTMLを生成するための関数
    */
   const createQuizHtml = (quizItem, questionNumber) => {
-    let answersHtml = '';
 
-    // 回答ボタンの生成
-    quizItem.answers.forEach((answer, answerIndex) => {
-      answersHtml += `<li class="p-quiz-box__answer__item">
+    // 回答の生成
+    const answersHtml = quizItem.answers.map((answer, answerIndex) => `<li class="p-quiz-box__answer__item">
         <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">
           ${answer}<i class="u-icon__arrow"></i>
         </button>
       </li>`
-    });
+    ).join('');
 
     // 引用テキストの生成
-    let noteHtml = quizItem.note ? `<cite class="p-quiz-box__note">
+    const noteHtml = quizItem.note ? `<cite class="p-quiz-box__note">
       <i class="u-icon__note"></i>${quizItem.note}
     </cite>` : '';
 
-    const quizHtml = `<section class="p-quiz-box js-quiz" data-quiz="${questionNumber}">
+    return `<section class="p-quiz-box js-quiz" data-quiz="${questionNumber}">
       <div class="p-quiz-box__question">
         <h2 class="p-quiz-box__question__title">
           <span class="p-quiz-box__label">Q${questionNumber + 1}</span>
@@ -84,20 +82,14 @@
       </div>
       ${noteHtml}
     </section>`
-
-    return quizHtml
   }
 
   const quizContainer = document.getElementById('js-quizContainer');
-  let allQuizHtml = ''
-
-  ALL_QUIZ.forEach((quizItem , index) => {
-    const newHtml = createQuizHtml(quizItem, index)
-    allQuizHtml += newHtml
-  });
 
   // 生成したクイズのHTMLを #js-quizContainer に挿入
-  quizContainer.innerHTML = allQuizHtml
+  quizContainer.innerHTML = ALL_QUIZ.map((quizItem, index) => {
+    return createQuizHtml(quizItem, index)
+  }).join('')
 
   // すべての問題を取得
   const allQuiz  = document.querySelectorAll('.js-quiz');
