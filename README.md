@@ -26,3 +26,12 @@ https://posse-ap.github.io/sample-ph1-website/quiz2/
 /assets/styles/common.css
 /assets/scripts/quiz2.js
 ```
+
+#### JavaScriptで問題をランダムに並び替えて出力
+https://posse-ap.github.io/sample-ph1-website/quiz3/
+```
+【参照ソースコード】
+/quiz3/index.html
+/assets/styles/common.css
+/assets/scripts/quiz3.js
+```
