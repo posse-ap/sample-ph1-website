@@ -7,7 +7,11 @@
   background-color: $color-light;
 
   &__logo {
-    width: 148px;
+    width: 120px;
+
+    @include mq(md) {
+      width: 148px;
+    }
   }
 
   &__nav {
