@@ -2,10 +2,15 @@
 
 .p-heading {
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: .05em;
+  line-height: 1.8;
+
+  @include mq(md) {
+    letter-spacing: .05em;
+    font-size: 36px;
+    line-height: 1.5;
+  }
 
   &.-light {
     color: $color-light;
@@ -18,6 +23,10 @@
     color: $color-primary;
     line-height: 1.8;
     display: block;
-    margin-top: 8px;
+    margin-top: 4px;
+
+    @include mq(md) {
+      margin-top: 8px;
+    }
   }
 }
