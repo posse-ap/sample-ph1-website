@@ -2,13 +2,17 @@
 
 .p-quiz-box {
   &:not(:first-of-type) {
-    margin-top: 120px;
+    margin-top: 80px;
+
+    @include mq(md) {
+      margin-top: 120px;
+    }
   }
 
   &__label {
     display: inline-block;
     line-height: 1.5;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     font-family: $font-english;
     color: $color-light;
@@ -16,54 +20,85 @@
     border-radius: 8px;
     padding: 8px 16px;
 
+    @include mq(md) {
+      font-size: 36px;
+    }
+
     &--accent {
       background-color: $color-accent;
     }
   }
 
-  &__question {
-
-  }
+  &__question {}
 
   &__question__title__text {
     display: block;
-    font-size: 36px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 1.5;
-    margin-top: 24px;
+    line-height: 1.8;
+    margin-top: 16px;
+
+    @include mq(md) {
+      margin-top: 24px;
+      line-height: 1.5;
+      font-size: 36px;
+    }
   }
 
   &__question__image {
     max-width: 718px;
-    margin: 64px auto 0;
+    margin: 24px auto 0;
+
+    @include mq(md) {
+      margin-top: 64px;
+    }
   }
 
   &__answer {
-    margin-top: 64px;
+    margin-top: 32px;
+
+    @include mq(md) {
+      margin-top: 64px;
+    }
   }
 
   &__answer__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 8px;
     margin-top: 16px;
+
+    @include mq(md) {
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__answer__button {
-    border: solid 5px $color-gray-light;
+    border: solid 4px $color-gray-light;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     text-align: left;
     line-height: 1.8;
-    padding: 19px;
+    padding: 16px;
     display: flex;
     align-items: center;
     width: 100%;
 
+
+    @include mq(md) {
+      padding: 19px;
+      font-size: 18px;
+      border-width: 5px;
+    }
+
     .u-icon__arrow {
-      font-size: 16px;
+      font-size: 12px;
       margin-left: auto;
+
+      @include mq(md) {
+        font-size: 16px;
+      }
     }
 
     &:disabled {
@@ -86,7 +121,7 @@
     margin-top: 16px;
     display: block;
     background-color: $color-gray-lightest;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.8;
     font-weight: bold;
     padding: 24px;
@@ -95,6 +130,17 @@
     gap: 16px;
     border-radius: 8px;
     font-style: normal;
+
+    @include mq(md) {
+      font-size: 18px;
+
+    }
+
+    @include mq(md, max) {
+      .u-icon__note {
+        font-size: 17px;
+      }
+    }
   }
 
   &__answer__correct {
