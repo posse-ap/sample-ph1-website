@@ -2,25 +2,50 @@
 
 .p-fixedLine {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
+  right: 0;
+  bottom: 0;
+
+  @include mq(md, max) {
+    left: 0;
+  }
+
+  @include mq(md) {
+    right: 16px;
+    bottom: 16px;
+  }
 
   &__link {
     background-color: #5FDF5B;
-    border-radius: 16px;
     display: flex;
-    padding: 22px 20px 22px 24px;
+    padding: 10px;
     align-items: center;
-    box-shadow: 4px 4px 20px rgba(#000, .15);
+
+    @include mq(md, max) {
+      justify-content: center;
+      gap: 8px;
+    }
+
+    @include mq(md) {
+      box-shadow: 4px 4px 20px rgba(#000, .15);
+      border-radius: 16px;
+      padding: 22px 20px 22px 24px;
+    }
 
     .u-icon__line {
-      font-size: 36px;
+      font-size: 28px;
+
+      @include mq(md) {
+        font-size: 36px;
+      }
     }
 
     .u-icon__link {
       font-size: 18px;
       color: #fff;
-      margin-left: 35px;
+
+      @include mq(md) {
+        margin-left: 35px;
+      }
     }
   }
 
@@ -31,6 +56,15 @@
     line-height: 1.3;
     text-align: left;
     color: $color-light;
-    margin-left: 13px;
+
+    @include mq(md, max) {
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(md) {
+      margin-left: 13px;
+    }
   }
 }

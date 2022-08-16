@@ -1,14 +1,23 @@
 @use '../../foundation/variables' as *;
 
 .p-line {
-  margin-top: 144px;
+  margin-top: 64px;
+
+  @include mq(md) {
+    margin-top: 144px;
+  }
 
   &__body {
     background: url(../img/bg-line.jpg) center center / cover;
     position: relative;
-    padding: 68px;
-    border-radius: 56px;
+    padding: 42px 24px;
+    border-radius: 28px;
     overflow: hidden;
+
+    @include mq(md) {
+      padding: 68px;
+      border-radius: 56px;
+    }
 
     &::before {
       content: '';
@@ -29,7 +38,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
+
+    @include mq(md, max) {
+      flex-direction: column;
+    }
+
+    @include mq(md) {
+      gap: 8px;
+    }
 
     .u-icon__line {
       font-size: 40px;
@@ -37,17 +54,26 @@
   }
 
   &__content {
-    text-align: center;
     color: $color-gray-light;
     font-size: 14px;
-    line-height: 1.8;
-    margin-top: 16px;
+    line-height: 1.6;
+    margin-top: 8px;
     letter-spacing: 0.1em;
+
+    @include mq(md) {
+      margin-top: 16px;
+      text-align: center;
+      line-height: 1.8;
+    }
   }
 
   &__footer {
-    margin-top: 16px;
+    margin-top: 34px;
     text-align: center;
+
+    @include mq(md) {
+      margin-top: 16px;
+    }
   }
 
   &__button {
