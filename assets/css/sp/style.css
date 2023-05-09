@@ -1,0 +1,388 @@
+/**
+* File Name : style.css
+* Version : 1.0
+* Description : POSSE課題(SP) 完成版
+* Since : 2023-05-07
+*
+* ---- Table of Contents ----
+*
+* 1.0 - Common
+*    1.1 - カスタムプロパティ
+*    1.2 - ベーススタイル
+*    1.3 - 汎用スタイル
+*
+* 2.0 - Sections
+*    2.1 - ヘッダー
+*    2.2 - フッター
+*    2.3 - メインビジュアル
+*    2.4 - POSSEとは
+*    2.5 - イベント
+*    2.6 - 日常生活
+*    2.7 - 公式LINE
+*
+* 3.0 - Animation, JavaScript Object
+*    3.1 - フェードイン
+*    3.2 - スライダー
+*
+*/
+
+/* ===================================================
+  レスポンシブ
+=================================================== */
+@media (max-width: 768px) {
+  /* 1.0 - Common */
+  /* ============================================ */
+
+  /**
+  * 1.2 - ベーススタイル
+  */
+  body.is-fixed {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    padding: 40px 12px 80px;
+    gap: 80px;
+  }
+
+  /**
+  * 1.3 - 汎用スタイル
+  */
+  br.is-pc {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .section-body {
+    margin-top: 20px;
+  }
+
+  .section-lead {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .title-ja {
+    font-size: 24px;
+  }
+
+  .title-en {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  /* 2.0 - Sections */
+  /* ============================================ */
+
+  /**
+  * 2.1 - ヘッダー
+  */
+  .header {
+    padding: 0 12px;
+  }
+
+  .header-inner {
+    height: 48px;
+  }
+
+  .header-logo {
+    width: 100px;
+    z-index: 1;
+  }
+
+  .header-button {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    margin-left: auto;
+    z-index: 1;
+  }
+
+  .header-buttonLine {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .3s linear;
+  }
+
+  .header.is-transparent:not(.is-open) .header-buttonLine {
+    background-color: var(--white-color);
+  }
+
+  .header-buttonLine:nth-child(1) {
+    top: 13px;
+  }
+
+  .header-buttonLine:nth-child(2) {
+    top: 20px;
+  }
+
+  .header-buttonLine:nth-child(3) {
+    top: 27px;
+  }
+
+  .header.is-open .header-buttonLine:nth-child(1) {
+    transform: translateX(-50%) rotate(45deg);
+    top: 20px;
+  }
+
+  .header.is-open .header-buttonLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header.is-open .header-buttonLine:nth-child(3) {
+    transform: translateX(-50%) rotate(-45deg);
+    top: 20px;
+  }
+
+  .header-nav {
+    position: fixed;
+    inset: 0;
+    background-color: var(--primary-light-color);
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 120px 24px 40px;
+    transition: visibility .3s linear, opacity .3s linear;
+  }
+
+  .header.is-open .header-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header-navList {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-navLink {
+    color: var(--primary-color);
+  }
+
+  .header.is-transparent .header-navLink {
+    color: var(--primary-color);
+  }
+
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 120px;
+  }
+
+  .header-ctaLink::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/icon-line.svg) center center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .header-corporateLink {
+    color: var(--gray-dark-color);
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: .05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .header-corporateLink::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon-external-link.svg) center center / contain no-repeat;
+  }
+
+  .header-snsList {
+    margin-top: 24px;
+  }
+
+  .header.is-transparent .header-snsLink {
+    filter: none;
+  }
+
+  /**
+  * 2.2 - フッター
+  */
+  .footer-logo {
+    width: 160px;
+  }
+
+  /**
+  * 2.3 - メインビジュアル
+  */
+  .mainvisual {
+    height: 380px;
+    padding: 16px 12px;
+    background-image: url(../img/sp/bg-mainvisual.jpg);
+  }
+
+  .mainvisual-head {
+    gap: 8px;
+  }
+
+  .mainvisual-title {
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 0px;
+  }
+
+  .mainvisual-lead {
+    font-size: 26px;
+    padding-left: 8px;
+  }
+
+  .mainvisual-scroll {
+    display: none;
+  }
+
+  /**
+  * 2.4 - POSSEとは
+  */
+  .about-column {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /**
+  * 2.5 - イベント
+  */
+  .event-slide {
+    margin: 0 -12px;
+  }
+
+  /**
+  * 2.6 - 日常生活
+  */
+  .daily-slide {
+    margin: 0 -12px;
+  }
+
+  .daily-list {
+    flex-direction: row;
+    gap: initial;
+    padding-top: 0 !important;
+  }
+
+  .daily-item {
+    flex-direction: column;
+    min-height: auto;
+    width: 320px;
+    flex-shrink: 0;
+  }
+
+  .daily-item:nth-child(odd) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .daily-item:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .daily-itemImage {
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+
+  .daily-itemImage img {
+    aspect-ratio: 8 / 5;
+  }
+
+  .daily-item:nth-child(odd) .daily-itemImage {
+    margin-right: 0;
+  }
+
+  .daily-item:nth-child(even) .daily-itemImage {
+    margin-left: 0;
+  }
+
+  .daily-itemBody {
+    padding: 20px 24px;
+  }
+
+  .daily-titleNumber {
+    font-size: 40px;
+  }
+
+  .daily-titleText {
+    font-size: 20px;
+    margin-left: 12px;
+  }
+
+  .daily-outline {
+    margin-top: 20px;
+  }
+
+  /**
+  * 2.7 - 公式LINE
+  */
+  .cta {
+    background-image: url(../img/sp/bg-cta.jpg);
+    padding: 40px 12px 52px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+  }
+
+  .cta-content {
+    text-align: left;
+  }
+
+  /* 3.0 - Animation, JavaScript Object */
+  /* ============================================ */
+
+  /**
+  * 3.1 - フェードイン
+  */
+
+  /**
+  * 3.2 - スライダー
+  */
+  .splide__pagination {
+    position: static;
+    gap: 8px;
+    line-height: 0;
+    margin-top: 20px;
+  }
+
+  .splide__pagination li {
+    line-height: 0;
+  }
+
+  .splide__pagination__page {
+    width: 10px;
+    height: 10px;
+    border: solid 1px var(--primary-color);
+    background-color: var(--white-color);
+    margin: 0;
+    opacity: 1;
+  }
+
+  .splide__pagination__page.is-active {
+    background-color: var(--primary-color);
+    transform: scale(1);
+  }
+}
