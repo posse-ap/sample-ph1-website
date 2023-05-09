@@ -405,13 +405,6 @@ br.is-sp {
   overflow: visible;
 }
 
-.event-list {
-  /* スライダー適用により不要 */
-  /* display: flex;
-  gap: 40px;
-  overflow: auto; */
-}
-
 .event-item {
   border-radius: 10px;
   overflow: hidden;
