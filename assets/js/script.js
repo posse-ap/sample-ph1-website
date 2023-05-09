@@ -1,20 +1,35 @@
 "use strict";
 
-// ハンバーガーメニューの開閉
+/**
+ * ハンバーガーメニュー
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Element/classList
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Document/body
+ *
+ * @description ヘッダーのハンバーガーメニューをクリックしたらヘッダーとbodyにクラスを付与する
+ */
+// ヘッダー・ボタンの要素を取得
 const header = document.getElementById("js-header");
 const button = document.getElementById("js-headerButton");
 
+// ボタンをクリックした時の処理
 button.addEventListener("click", () => {
   header.classList.toggle("is-open");
   document.body.classList.toggle("is-fixed");
 });
 
-// メインビジュアルを超えたらヘッダーにクラスを付与
+/**
+ * ヘッダーの透過
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Window/scrollY
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Element/clientHeight
+ *
+ * @description スクロールしてメインビジュアルを過ぎる時にヘッダーにクラスを付与する
+ */
+// メインビジュアルの要素を取得
 const mainVisual = document.getElementById("js-mainVisual");
-const headerLogo = document.getElementById("js-headerLogo");
-const headerButton = document.getElementById("js-headerButton");
 
+// スクロールした時の処理
 window.addEventListener("scroll", () => {
+  // [スクロールした分の高さ] が [メインビジュアルの高さ - ヘッダーの高さ] より大きい時
   if (window.scrollY > mainVisual.clientHeight - header.clientHeight) {
     header.classList.remove("is-transparent");
   } else {
@@ -26,10 +41,12 @@ window.addEventListener("scroll", () => {
  * スライダー
  * @see  https://splidejs.com/
  */
-// オプションの設定
+// オプションで利用する固定値の設定
 const cardWidth = 320;
 const padding = 28;
 const gap = 40;
+
+// オプションの設定
 const eventSlideOptions = {
   type: 'loop',
   gap: '40px',
@@ -68,8 +85,9 @@ new Splide( '#js-dailySlide', dailySlideOptions ).mount();
 
 /**
  * スクロールで要素をフェードイン
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API
  */
-// 交差を監視する要素を準備
+// 交差を監視する要素を取得
 const targets = document.querySelectorAll('[data-scroll]');
 
 // 範囲の設定
@@ -79,6 +97,16 @@ const options = {
   threshold: 0
 };
 
+// 交差したときに実行する関数
+const intersect = entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { // 監視中の要素が交差した状態ならtrue
+      // 監視中の要素が交差したときの処理
+      entry.target.classList.add('is-show');
+    }
+  });
+}
+
 // Intersection Observerを使えるようにする
 const observer = new IntersectionObserver(intersect, options);
 
@@ -87,12 +115,3 @@ targets.forEach(target => {
   observer.observe(target);
 });
 
-// 交差したときに実行する関数
-function intersect(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { // 監視中の要素が交差した状態ならtrue
-      // 監視中の要素が交差したときの処理
-      entry.target.classList.add('is-show');
-    }
-  });
-}

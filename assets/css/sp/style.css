@@ -276,12 +276,12 @@
   */
   .daily-slide {
     margin: 0 -12px;
+    padding-top: 0;
   }
 
   .daily-list {
     flex-direction: row;
     gap: initial;
-    padding-top: 0 !important;
   }
 
   .daily-item {

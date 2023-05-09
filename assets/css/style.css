@@ -447,18 +447,19 @@ br.is-sp {
 /**
  * 2.6 - 日常生活
  */
+.daily-slide {
+  padding-top: 40px;
+}
+
 .daily-list {
   display: flex;
   flex-direction: column;
   gap: 120px;
-  /* スライダー適用時のスタイルを上書き */
-  padding-top: 40px !important;
 }
 
 /* スライダー適用時のスタイルを上書き */
 .splide.is-initialized:not(.is-active) .daily-list {
   display: flex;
-  padding-top: 40px;
 }
 
 .daily-slideTrack {
