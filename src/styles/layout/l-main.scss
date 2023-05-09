@@ -1,9 +1,0 @@
-@use '../Foundation/variables' as *;
-
-.l-main {
-  padding-top: 56px;
-
-  @include mq(md) {
-    padding-top: 80px;
-  }
-}
