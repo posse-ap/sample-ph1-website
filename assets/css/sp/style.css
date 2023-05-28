@@ -188,7 +188,7 @@
     display: block;
     width: 40px;
     height: 40px;
-    background: url(../img/icon-line.svg) center center / contain no-repeat;
+    background: url(../../img/icon-line.svg) center center / contain no-repeat;
     position: absolute;
     top: 50%;
     left: 20px;
@@ -210,7 +210,7 @@
     display: block;
     width: 14px;
     height: 14px;
-    background: url(../img/icon-external-link.svg) center center / contain no-repeat;
+    background: url(../../img/icon-external-link.svg) center center / contain no-repeat;
   }
 
   .header-snsList {
@@ -234,7 +234,7 @@
   .mainvisual {
     height: 380px;
     padding: 16px 12px;
-    background-image: url(../img/sp/bg-mainvisual.jpg);
+    background-image: url(../../img/sp/bg-mainvisual.jpg);
   }
 
   .mainvisual-head {
@@ -339,7 +339,7 @@
   * 2.7 - 公式LINE
   */
   .cta {
-    background-image: url(../img/sp/bg-cta.jpg);
+    background-image: url(../../img/sp/bg-cta.jpg);
     padding: 40px 12px 52px;
   }
 
