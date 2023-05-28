@@ -166,6 +166,9 @@ br.is-sp {
  * 2.1 - ヘッダー
  */
 .header {
+  display: flex;
+  align-items: center;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -180,12 +183,6 @@ br.is-sp {
 .header.is-transparent {
   background-color: transparent;
   border: none;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  height: 80px;
 }
 
 .header-logo {
