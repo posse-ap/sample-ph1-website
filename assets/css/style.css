@@ -51,6 +51,10 @@
 /**
  * 1.2 - ベーススタイル
  */
+html {
+scroll-behavior: smooth;
+}
+
 body {
   color: var(--dark-color);
   font-family: var(--default-font);
@@ -79,7 +83,8 @@ br.is-sp {
 }
 
 .section {
-
+  padding-top: 80px;
+  margin-top: -80px;
 }
 
 .section-body {

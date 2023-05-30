@@ -57,6 +57,11 @@
     padding: 0;
   }
 
+  .section {
+    padding-top: 48px;
+    margin-top: -48px;
+  }
+
   .section-body {
     margin-top: 20px;
   }
