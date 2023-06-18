@@ -71,6 +71,14 @@
   margin-top: -80px;
 }
 
+.section-lead {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
 .section-body {
   margin-top: 40px;
 }
@@ -127,8 +135,6 @@
   gap: 48px;
 }
 
-/* 
-
 .header-navList {
   display: flex;
   gap: 32px;
@@ -149,12 +155,12 @@
 .header-snsList {
   display: flex;
   gap: 24px;
-} */
+}
 
 /**
  * 2.2 - フッター
  */
-/* .footer {
+.footer {
   padding-top: 40px;
 }
 
@@ -176,9 +182,9 @@
   display: flex;
   align-items: center;
   gap: 4px;
-} */
+} 
 
-/* .footer-corporateLink::after {
+.footer-corporateLink::after {
   content: '';
   display: block;
   width: 14px;
@@ -201,27 +207,28 @@
   line-height: 1.5;
   font-size: 10px;
   padding: 24px;
-} */
+} 
 
 /**
  * 2.3 - メインビジュアル
  */
-/* .mainvisual {
+.mainvisual {
   background: url(../img/bg-mainvisual.jpg) center center / cover no-repeat;
   height: 100vh;
   padding: 40px 24px;
   display: flex;
   align-items: flex-end;
-} */
+}
 
-/* .mainvisual-inner {
+.mainvisual-inner {
   max-width: 980px;
   width: 100%;
   margin: 0 auto;
-} */
+}
 
-/* .mainvisual-head {
-  display: inline-flex;
+.mainvisual-head {
+  /* display: inline-flex; */
+  display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: flex-start;
@@ -246,9 +253,9 @@
   letter-spacing: .05em;
   font-size: 60px;
   padding-left: 20px;
-} */
+}
 
-/* .mainvisual-scroll {
+.mainvisual-scroll {
   position: absolute;
   right: 24px;
   bottom: 24px;
@@ -260,9 +267,9 @@
   gap: 4px;
   align-items: center;
   text-shadow: 0 0 10px rgba(51, 51, 51, .25);
-} */
+}
 
-/* .mainvisual-scroll::before {
+.mainvisual-scroll::before {
   content: '';
   display: block;
   width: 8px;
@@ -270,12 +277,12 @@
   background-color: var(--white-color);
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(51, 51, 51, .25);
-}  */
+}  
 
 /**
  * 2.4 - POSSEとは
  */
-/* .about-column {
+.about-column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -291,11 +298,57 @@
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .05em;
-} */
+}
 
 /**
  * 2.5 - イベント
  */
+.event-slide {
+  overflow: auto;
+}
+
+.event-list {
+  display: flex;
+  gap: 40px;
+}
+
+.event-item {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 320px;
+  flex-shrink: 0;
+  background-color: var(--primary-light-color);
+  text-align: center;
+}
+
+.event-itemBody {
+  padding: 20px;
+}
+
+.event-itemImage img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-itemDate {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .1em;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: inline-block;
+  padding: 0 12px;
+  border-radius: 5em;
+}
+
+.event-itemName {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: .1em;
+  font-weight: bold;
+}
 
 /**
  * 2.6 - 日常生活
