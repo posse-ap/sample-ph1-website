@@ -48,6 +48,10 @@
 /**
  * 1.2 - ベーススタイル
  */
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   padding: 80px 0 160px;
   display: flex;
@@ -303,7 +307,10 @@
 /**
  * 2.5 - イベント
  */
-.event-slide {
+/**
+ * 2.5 - イベント
+ */
+ .event-slide {
   overflow: auto;
 }
 
