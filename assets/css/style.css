@@ -394,17 +394,15 @@ html {
   object-fit: cover;
 }
 
-
-
 .daily-item:nth-child(odd) .daily-itemImage {
   margin-right: -40px;
 }
 
 .daily-item:nth-child(even) .daily-itemImage {
   margin-left: -40px;
-}
+} 
 
-/* 
+
 
 .daily-itemBody {
   padding: 48px 56px;
@@ -416,8 +414,7 @@ html {
   font-size: 58px;
   line-height: 1;
   letter-spacing: .05em;
-  font-family: var(--english-font);
-  color: var(--primary-color);
+  color: #0071BC;
 }
 
 .daily-titleText {
@@ -436,6 +433,15 @@ html {
   gap: 8px;
 }
 
+.daily-outlineItem::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: url(../img/icon-check.svg);
+}
+
 .daily-outlineItem {
   display: flex;
   align-items: center;
@@ -446,21 +452,13 @@ html {
   letter-spacing: .1em;
 }
 
-.daily-outlineItem::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  background: url(../img/icon-check.svg) center center / contain no-repeat;
-}
-
 .daily-description {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .05em;
   margin-top: 12px;
-} */
+} 
+
 
 /**
  * 2.7 - 公式LINE
