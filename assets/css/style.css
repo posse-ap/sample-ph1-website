@@ -385,16 +385,16 @@ html {
   border-radius: 10px;
   overflow: hidden;
   width: 480px;
+  height: 320px;
   flex-shrink: 0;
   margin-top: -40px;
 }
 
-/* 
-
 .daily-itemImage img {
-  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
+
+
 
 .daily-item:nth-child(odd) .daily-itemImage {
   margin-right: -40px;
@@ -403,6 +403,8 @@ html {
 .daily-item:nth-child(even) .daily-itemImage {
   margin-left: -40px;
 }
+
+/* 
 
 .daily-itemBody {
   padding: 48px 56px;
