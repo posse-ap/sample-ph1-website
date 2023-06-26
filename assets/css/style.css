@@ -307,15 +307,13 @@ html {
 /**
  * 2.5 - イベント
  */
-/**
- * 2.5 - イベント
- */
- .event-slide {
+.event-slide {
   overflow: auto;
 }
 
 .event-list {
   display: flex;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -323,27 +321,25 @@ html {
   border-radius: 10px;
   overflow: hidden;
   width: 320px;
-  flex-shrink: 0;
-  background-color: var(--primary-light-color);
+  flex-shrink: 0; /* flexの子要素で縮んだりしないように幅を変更したくない要素に指定します */
+  background-color: #f7f9fb;
   text-align: center;
-}
-
-.event-itemBody {
-  padding: 20px;
 }
 
 .event-itemImage img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+}
+.event-itemBody {
+  padding: 20px;
 }
 
 .event-itemDate {
   font-size: 14px;
   line-height: 1.8;
-  letter-spacing: .1em;
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  letter-spacing: 0.1em;
+  background-color: #0071bc;
+  color: #ffffff;
   display: inline-block;
   padding: 0 12px;
   border-radius: 5em;
@@ -353,13 +349,116 @@ html {
   margin-top: 4px;
   font-size: 18px;
   line-height: 1.8;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: bold;
 }
 
 /**
  * 2.6 - 日常生活
  */
+
+.daily-list {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+
+.daily-item {
+  display: flex;
+  background-color: #F7F9FB;
+  border-radius: 10px;
+  min-height: 324px;
+}
+
+.daily-item:nth-of-type(odd) {
+  flex-direction: row-reverse;
+  margin-right: 40px;
+}
+
+.daily-item:nth-of-type(even) {
+  margin-left: 40px;
+}
+
+.daily-itemImage {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 480px;
+  flex-shrink: 0;
+  margin-top: -40px;
+}
+
+/* 
+
+.daily-itemImage img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.daily-item:nth-child(odd) .daily-itemImage {
+  margin-right: -40px;
+}
+
+.daily-item:nth-child(even) .daily-itemImage {
+  margin-left: -40px;
+}
+
+.daily-itemBody {
+  padding: 48px 56px;
+  width: 100%;
+}
+
+.daily-titleNumber {
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 1;
+  letter-spacing: .05em;
+  font-family: var(--english-font);
+  color: var(--primary-color);
+}
+
+.daily-titleText {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: .05em;
+  margin-left: 20px;
+  vertical-align: bottom;
+}
+
+.daily-outline {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.daily-outlineItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 14px;
+  letter-spacing: .1em;
+}
+
+.daily-outlineItem::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: url(../img/icon-check.svg) center center / contain no-repeat;
+}
+
+.daily-description {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .05em;
+  margin-top: 12px;
+} */
 
 /**
  * 2.7 - 公式LINE
