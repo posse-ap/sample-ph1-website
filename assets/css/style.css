@@ -463,6 +463,35 @@ html {
 /**
  * 2.7 - 公式LINE
  */
+.cta {
+  background: url(../img/bg-cta.jpg) center center / cover no-repeat;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 16px;
+  padding: 40px 24px 52px;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: .1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta-content {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .05em;
+  margin-top: 16px;
+}
+
+.cta-footer {
+  margin-top: 32px;
+}
 
 /* 3.0 - Animation, JavaScript Object */
 /* ============================================ */
