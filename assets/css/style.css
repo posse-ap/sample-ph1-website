@@ -477,7 +477,6 @@ html {
   line-height: 1.8;
   letter-spacing: .1em;
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 12px;
 }
@@ -491,6 +490,41 @@ html {
 
 .cta-footer {
   margin-top: 32px;
+}
+
+.cta-button {
+  display: block;
+  width: 315px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: .1em;
+  color: #0071BC;
+  background-color: #FFFFFF;
+  border: solid 1px #0071BC;
+  border-radius: 50px;
+  padding: 16px 20px;
+  position: relative;
+}
+
+.cta-button:hover {
+  background-color: #0071BC;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.cta-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 14px;
+  height: 14px;
+}
+
+.cta-button:hover .cta-icon g {
+  stroke: var(--white-color);
 }
 
 /* 3.0 - Animation, JavaScript Object */
