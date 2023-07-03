@@ -28,7 +28,6 @@
   レスポンシブ
 =================================================== */
 @media (max-width: 768px) {
-}
   /* 1.0 - Common */
   /* ============================================ */
 
@@ -54,6 +53,30 @@
   /**
   * 2.3 - メインビジュアル
   */
+  .mainvisual {
+    height: 380px;
+    padding: 16px 12px;
+    background-image: url(../../img/sp/bg-mainvisual.jpg);
+  }
+
+  .mainvisual-head {
+    gap: 8px;
+  }
+
+  .mainvisual-title {
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 0px;
+  }
+
+  .mainvisual-lead {
+    font-size: 26px;
+    padding-left: 8px;
+  }
+
+  .mainvisual-scroll {
+    display: none;
+  }
 
   /**
   * 2.4 - POSSEとは
@@ -82,3 +105,4 @@
   * 3.2 - スライダー
   */
 
+}
