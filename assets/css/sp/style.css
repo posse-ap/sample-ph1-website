@@ -113,10 +113,10 @@
   /**
   * 2.4 - POSSEとは
   */
-  /* .about-column {
+  .about-column {
     grid-template-columns: 1fr;
     gap: 20px;
-  } */
+  }
 
   /**
   * 2.5 - イベント
@@ -129,7 +129,7 @@
   /**
   * 2.7 - 公式LINE
   */
-  /* .cta {
+  .cta {
     background-image: url(../../img/sp/bg-cta.jpg);
     padding: 40px 12px 52px;
   }
@@ -138,7 +138,7 @@
     font-size: 24px;
   }
 
-  .cta-content {
+  /* .cta-content {
     text-align: left;
   } */
 
