@@ -1,6 +1,8 @@
 /**
 * File Name : style.css
-* Description : POSSE課題(SP)
+* Version : 1.0
+* Description : POSSE課題(SP) 完成版
+* Since : 2023-05-07
 *
 * ---- Table of Contents ----
 *
@@ -65,6 +67,7 @@
 
   .mainvisual-title {
     font-size: 12px;
+    margin: 0;
     padding-left: 8px;
     padding-right: 0px;
   }
@@ -74,13 +77,17 @@
     padding-left: 8px;
   }
 
-  .mainvisual-scroll {
+  /* .mainvisual-scroll {
     display: none;
-  }
+  } */
 
   /**
   * 2.4 - POSSEとは
   */
+  /* .about-column {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  } */
 
   /**
   * 2.5 - イベント
@@ -93,6 +100,18 @@
   /**
   * 2.7 - 公式LINE
   */
+  /* .cta {
+    background-image: url(../../img/sp/bg-cta.jpg);
+    padding: 40px 12px 52px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+  }
+
+  .cta-content {
+    text-align: left;
+  } */
 
   /* 3.0 - Animation, JavaScript Object */
   /* ============================================ */
@@ -104,5 +123,4 @@
   /**
   * 3.2 - スライダー
   */
-
 }
