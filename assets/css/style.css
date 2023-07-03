@@ -52,6 +52,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  color: #333333;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 .wrapper {
   padding: 80px 0 160px;
   display: flex;
@@ -106,7 +111,8 @@ html {
   line-height: 1.5;
   letter-spacing: .1em;
   margin-top: 8px;
-  color: var(--primary-color);
+  color: #0071BC;
+  font-family: 'Plus Jakarta Sans', sans-serif
 }
 
 /* 2.0 - Sections */
@@ -211,6 +217,7 @@ html {
   line-height: 1.5;
   font-size: 10px;
   padding: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 } 
 
 /**
@@ -271,6 +278,7 @@ html {
   gap: 4px;
   align-items: center;
   text-shadow: 0 0 10px rgba(51, 51, 51, .25);
+  font-family: 'Plus Jakarta Sans', sans-serif
 }
 
 .mainvisual-scroll::before {
@@ -343,6 +351,7 @@ html {
   display: inline-block;
   padding: 0 12px;
   border-radius: 5em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .event-itemName {
@@ -415,6 +424,7 @@ html {
   line-height: 1;
   letter-spacing: .05em;
   color: #0071BC;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .daily-titleText {
