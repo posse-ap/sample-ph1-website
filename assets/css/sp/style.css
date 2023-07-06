@@ -1,4 +1,4 @@
-/**
+/* *
 * File Name : style.css
 * Version : 1.0
 * Description : POSSE課題(SP) 完成版
@@ -85,7 +85,7 @@
   /**
   * 2.3 - メインビジュアル
   */
-  .mainvisual {
+  /* .mainvisual {
     height: 380px;
     padding: 16px 12px;
     background-image: url(../../img/sp/bg-mainvisual.jpg);
@@ -108,7 +108,7 @@
 
   .mainvisual-scroll {
     display: none;
-  }
+  } */
 
   /**
   * 2.4 - POSSEとは
@@ -129,7 +129,7 @@
   /**
   * 2.7 - 公式LINE
   */
-  .cta {
+  /* .cta {
     background-image: url(../../img/sp/bg-cta.jpg);
     padding: 40px 12px 52px;
   }
@@ -140,7 +140,7 @@
 
   .cta-content {
     text-align: left;
-  }
+  } */
 
   /* 3.0 - Animation, JavaScript Object */
   /* ============================================ */
