@@ -36,40 +36,40 @@
   /**
   * 1.2 - ベーススタイル
   */
-  /* .wrapper {
+  .wrapper {
     padding: 40px 12px 80px;
     gap: 80px;
-  } */
+  }
 
   /**
   * 1.3 - 汎用スタイル
   */
-  /* .container {
+  .container {
     padding: 0;
   }
 
   .section {
     padding-top: 48px;
     margin-top: -48px;
-  } */
-/* 
+  }
+
   .section-body {
     margin-top: 20px;
-  } */
+  }
 
-  /* .section-lead {
+  .section-lead {
     text-align: left;
     margin-top: 20px;
-  } */
+  }
 
-  /* .title-ja {
+  .title-ja {
     font-size: 24px;
   }
 
   .title-en {
     font-size: 10px;
     margin-top: 4px;
-  } */
+  }
 
   /* 2.0 - Sections */
   /* ============================================ */
@@ -85,7 +85,7 @@
   /**
   * 2.3 - メインビジュアル
   */
-  /* .mainvisual {
+  .mainvisual {
     height: 380px;
     padding: 16px 12px;
     background-image: url(../../img/sp/bg-mainvisual.jpg);
@@ -108,28 +108,91 @@
 
   .mainvisual-scroll {
     display: none;
-  } */
+  }
 
   /**
   * 2.4 - POSSEとは
   */
-  /* .about-column {
+  .about-column {
     grid-template-columns: 1fr;
     gap: 20px;
-  } */
+  }
 
   /**
   * 2.5 - イベント
   */
+  .event-slide {
+    margin: 0 -12px;
+  }
 
   /**
   * 2.6 - 日常生活
   */
+  .daily-slide {
+    margin: 0 -12px;
+    padding-top: 0;
+  }
+
+  .daily-list {
+    flex-direction: row;
+    gap: initial;
+  }
+
+  .daily-item {
+    flex-direction: column;
+    min-height: auto;
+    width: 320px;
+    flex-shrink: 0;
+  }
+
+  .daily-item:nth-child(odd) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .daily-item:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .daily-itemImage {
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+
+  .daily-itemImage img {
+    aspect-ratio: 8 / 5;
+  }
+
+  .daily-item:nth-child(odd) .daily-itemImage {
+    margin-right: 0;
+  }
+
+  .daily-item:nth-child(even) .daily-itemImage {
+    margin-left: 0;
+  }
+
+  .daily-itemBody {
+    padding: 20px 24px;
+  }
+
+  .daily-titleNumber {
+    font-size: 40px;
+  }
+
+  .daily-titleText {
+    font-size: 20px;
+    margin-left: 12px;
+  }
+
+  .daily-outline {
+    margin-top: 20px;
+  }
 
   /**
   * 2.7 - 公式LINE
   */
-  /* .cta {
+  .cta {
     background-image: url(../../img/sp/bg-cta.jpg);
     padding: 40px 12px 52px;
   }
@@ -140,7 +203,7 @@
 
   .cta-content {
     text-align: left;
-  } */
+  }
 
   /* 3.0 - Animation, JavaScript Object */
   /* ============================================ */
