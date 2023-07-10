@@ -121,17 +121,18 @@
   /**
   * 2.5 - イベント
   */
-  .event-slide {
-    margin: 0 -12px;
+  .event-list {
+    justify-content: flex-start;
   }
 
   /**
   * 2.6 - 日常生活
   */
-  .daily-slide {
+  /* .daily-slide {
     margin: 0 -12px;
     padding-top: 0;
-  }
+  } */
+
 
   .daily-list {
     flex-direction: row;
@@ -145,15 +146,18 @@
     flex-shrink: 0;
   }
 
+
   .daily-item:nth-child(odd) {
     flex-direction: column;
-    margin-right: 0;
+    /* margin-right: 0; */
   }
 
   .daily-item:nth-child(even) {
-    margin-left: 0;
+    /* margin-left: 0; */
   }
 
+  /*
+  
   .daily-itemImage {
     margin-top: 0;
     border-radius: 10px 10px 0 0;
@@ -172,6 +176,10 @@
     margin-left: 0;
   }
 
+  */
+
+  /*
+
   .daily-itemBody {
     padding: 20px 24px;
   }
@@ -187,7 +195,8 @@
 
   .daily-outline {
     margin-top: 20px;
-  }
+  } 
+  */
 
   /**
   * 2.7 - 公式LINE
