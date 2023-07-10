@@ -365,6 +365,10 @@ body {
  * 2.6 - 日常生活
  */
 
+.daily-slide {
+  overflow: auto;
+}
+
 .daily-list {
   padding-top: 40px;
   display: flex;
@@ -393,6 +397,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   width: 480px;
+  height: 320px;
   flex-shrink: 0;
   margin-top: -40px;
 }
@@ -401,14 +406,13 @@ body {
   object-fit: cover;
 }
 
-.daily-item:nth-child(odd) .daily-itemImage {
+.daily-item:nth-of-type(odd) .daily-itemImage {
   margin-right: -40px;
 }
 
-.daily-item:nth-child(even) .daily-itemImage {
+.daily-item:nth-of-type(even) .daily-itemImage {
   margin-left: -40px;
 } 
-
 
 
 .daily-itemBody {

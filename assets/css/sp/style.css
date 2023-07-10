@@ -128,57 +128,41 @@
   /**
   * 2.6 - 日常生活
   */
-  /* .daily-slide {
-    margin: 0 -12px;
-    padding-top: 0;
-  } */
-
 
   .daily-list {
     flex-direction: row;
-    gap: initial;
+    gap: 40px;
   }
 
   .daily-item {
     flex-direction: column;
-    min-height: auto;
     width: 320px;
     flex-shrink: 0;
   }
 
-
-  .daily-item:nth-child(odd) {
+  .daily-item:nth-of-type(odd) {
     flex-direction: column;
-    /* margin-right: 0; */
+    margin-right: 0;
   }
 
-  .daily-item:nth-child(even) {
-    /* margin-left: 0; */
+  .daily-item:nth-of-type(even) {
+    margin-left: 0;
   }
 
-  /*
-  
   .daily-itemImage {
     margin-top: 0;
     border-radius: 10px 10px 0 0;
     width: 100%;
-  }
+    height: 200px;
+  } 
 
-  .daily-itemImage img {
-    aspect-ratio: 8 / 5;
-  }
-
-  .daily-item:nth-child(odd) .daily-itemImage {
+  .daily-item:nth-of-type(odd) .daily-itemImage {
     margin-right: 0;
   }
 
-  .daily-item:nth-child(even) .daily-itemImage {
+  .daily-item:nth-of-type(even) .daily-itemImage {
     margin-left: 0;
   }
-
-  */
-
-  /*
 
   .daily-itemBody {
     padding: 20px 24px;
@@ -196,7 +180,7 @@
   .daily-outline {
     margin-top: 20px;
   } 
-  */
+
 
   /**
   * 2.7 - 公式LINE
