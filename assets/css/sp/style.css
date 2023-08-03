@@ -91,6 +91,19 @@
     display: none;
   }
 
+  /* .header-nav {
+    position: fixed;
+    inset: 0;
+    background-color: var(--primary-light-color);
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 120px 24px 40px;
+    transition: visibility .3s linear, opacity .3s linear;
+  } */
+
   .header-button {
     width: 42px;
     height: 42px;
@@ -120,6 +133,15 @@
   .header-buttonLine:nth-of-type(3) {
     top: 27px;
   }
+
+  /* .header.is-open .header-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header.is-transparent:not(.is-open) .header-buttonLine {
+    background-color: var(--white-color);
+  } */
 
   /**
   * 2.2 - フッター
