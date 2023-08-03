@@ -196,6 +196,12 @@
     margin-top: 24px;
   }
 
+  .header.is-transparent {
+    background-color: transparent;
+    border: none;
+  }
+  
+
   /**
   * 2.2 - フッター
   */
