@@ -100,7 +100,7 @@
   }
 
   .header-buttonLine {
-    /* display: block; */
+    display: block;
     width: 30px;
     height: 2px;
     background-color: var(--primary-color);
