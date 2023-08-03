@@ -149,11 +149,6 @@
     opacity: 1;
   }
 
-  
-  .header.is-transparent:not(.is-open) .header-buttonLine {
-    background-color: var(--white-color);
-  }
-
   .header-navList {
     flex-direction: column;
     width: 100%;
@@ -183,9 +178,7 @@
   .header-corporateLink {
     color: var(--gray-dark-color);
     font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: .05em;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 4px;
   }
@@ -198,12 +191,9 @@
     background: url(../../img/icon-external-link.svg) center center / contain no-repeat;
   }
 
+  
   .header-snsList {
     margin-top: 24px;
-  }
-
-  .header.is-transparent .header-snsLink {
-    filter: none;
   }
 
   /**

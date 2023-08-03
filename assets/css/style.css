@@ -505,19 +505,19 @@ body {
 }
 
 .cta-button {
-  display: block;
+  display: inline-block;
   width: 315px;
+  padding: 16px 20px;
   text-align: center;
-  margin: 0 auto;
   font-size: 16px;
   font-weight: bold;
+  color: #0071bc;
   line-height: 1.5;
-  letter-spacing: .1em;
-  color: #0071BC;
+  letter-spacing: 0.1em;
   background-color: #FFFFFF;
   border: solid 1px #0071BC;
   border-radius: 50px;
-  padding: 16px 20px;
+  /* こちらを追記しましょう */
   position: relative;
 }
 
