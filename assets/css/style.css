@@ -133,6 +133,7 @@ body {
   border-bottom: solid 1px var(--gray-light-color);
   padding: 0 24px;
   z-index: 10000;
+  transition: background-color .3s linear;
 }
 .header-logo {
   width: 148px;
@@ -166,6 +167,24 @@ body {
   display: flex;
   gap: 24px;
 }
+
+.header.is-transparent {
+  background-color: transparent;
+  border: none;
+}
+
+.header.is-transparent:not(.is-open) .header-logo {
+  filter: brightness(10);
+}
+
+.header.is-transparent:not(.is-open) .header-navLink {
+  color: #FFFFFF;
+}
+
+.header.is-transparent:not(.is-open) .header-snsLink {
+  filter: brightness(10);
+}
+
 
 /**
  * 2.2 - フッター

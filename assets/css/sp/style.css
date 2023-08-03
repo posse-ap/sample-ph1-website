@@ -196,17 +196,8 @@
     margin-top: 24px;
   }
 
-  .header.is-transparent {
-    background-color: transparent;
-    border: none;
-  }
-
-  .header.is-transparent:not(.is-open) .header-logo {
-    filter: brightness(10);
-  }
-  
   .header.is-transparent:not(.is-open) .header-buttonLine {
-    background-color: var(--white-color);
+    background-color: #FFFFFF;
   }
 
   /**
