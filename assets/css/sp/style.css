@@ -88,13 +88,9 @@
   }
 
   .header-nav {
-    display: none;
-  }
-
-  /* .header-nav {
     position: fixed;
     inset: 0;
-    background-color: var(--primary-light-color);
+    background-color: #F7F9FB;
     overflow: auto;
     visibility: hidden;
     opacity: 0;
@@ -102,7 +98,7 @@
     gap: 0;
     padding: 120px 24px 40px;
     transition: visibility .3s linear, opacity .3s linear;
-  } */
+  }
 
   .header-button {
     width: 42px;
