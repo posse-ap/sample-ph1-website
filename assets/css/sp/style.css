@@ -246,6 +246,10 @@
   /**
   * 2.5 - イベント
   */
+  .event-slide {
+    margin: 0 -12px;
+  }
+
   .event-list {
     justify-content: flex-start;
   }
@@ -253,6 +257,9 @@
   /**
   * 2.6 - 日常生活
   */
+  .daily-slide {
+    margin: 0 -12px;
+  }
 
   .daily-list {
     flex-direction: row;

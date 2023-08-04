@@ -387,11 +387,6 @@ body {
 /**
  * 2.6 - 日常生活
  */
-
-.daily-slide {
-  padding-top: 40px;
-}
-
 .daily-list {
   padding-top: 40px;
   display: flex;
@@ -399,6 +394,10 @@ body {
   gap: 120px;
 }
 
+/* スライダー適用時のスタイルを上書き */
+.splide.is-initialized:not(.is-active) .daily-list {
+  display: flex;
+}
 
 .daily-item {
   display: flex;
