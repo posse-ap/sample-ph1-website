@@ -572,3 +572,22 @@ body {
 /**
  * 3.2 - スライダー
  */
+.splide__arrow {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #0071BC;
+  background-color: #FFFFFF;
+  opacity: 1;
+}
+
+.splide__arrow svg path {
+  fill: #0071BC;
+}
+
+.splide__arrow--prev {
+  left: 8px;
+}
+
+.splide__arrow--next {
+  right: 8px;
+}
