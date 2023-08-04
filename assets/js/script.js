@@ -64,4 +64,5 @@ const dailySlideOptions = {
   }
 }
 
-new Splide( '#js-eventSlide', eventSlideOptions).mount();
+new Splide('#js-eventSlide', eventSlideOptions).mount();
+new Splide('#js-dailySlide', dailySlideOptions).mount();

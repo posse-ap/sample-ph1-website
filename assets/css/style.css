@@ -334,7 +334,11 @@ body {
  * 2.5 - イベント
  */
 .event-slide {
-  overflow: auto;
+  margin: 0 auto;
+}
+
+.event-slideTrack {
+  overflow: visible;
 }
 
 /* .event-list {
@@ -385,7 +389,7 @@ body {
  */
 
 .daily-slide {
-  overflow: auto;
+  padding-top: 40px;
 }
 
 .daily-list {
