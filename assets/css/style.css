@@ -337,11 +337,11 @@ body {
   overflow: auto;
 }
 
-.event-list {
+/* .event-list {
   display: flex;
   justify-content: center;
   gap: 40px;
-}
+} */
 
 .event-item {
   border-radius: 10px;

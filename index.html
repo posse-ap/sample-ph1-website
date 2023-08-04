@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ph1 POSSE課題</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/splide.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/sp/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -138,54 +138,56 @@
             </div>
           </div>
           <div class="section-body">
-            <div class="event-slide">
-              <ul class="event-list">
-                <li class="event-item">
-                  <figure class="event-itemImage">
-                    <img src="./assets/img/img-event01.jpg" alt="" />
-                  </figure>
-                  <div class="event-itemBody">
-                    <p class="event-itemDate">
-                      <time datetime="2021-04">2021.April</time>
-                    </p>
-                    <p class="event-itemName">入学式</p>
-                  </div>
-                </li>
-                <li class="event-item">
-                  <figure class="event-itemImage">
-                    <img src="./assets/img/img-event02.jpg" alt="" />
-                  </figure>
-                  <div class="event-itemBody">
-                    <p class="event-itemDate">
-                      <time datetime="2021-03">2021.Mar</time>
-                    </p>
-                    <p class="event-itemName">軽井沢旅行</p>
-                  </div>
-                </li>
-                <li class="event-item">
-                  <figure class="event-itemImage">
-                    <img src="./assets/img/img-event03.jpg" alt="" />
-                  </figure>
-                  <div class="event-itemBody">
-                    <p class="event-itemDate">
-                      <time datetime="2021-04">2021.April</time>
-                    </p>
-                    <p class="event-itemName">オープン講演会</p>
-                  </div>
-                </li>
-                <li class="event-item">
-                  <figure class="event-itemImage">
-                    <img src="./assets/img/img-event04.jpg" alt="" />
-                  </figure>
-                  <div class="event-itemBody">
-                    <p class="event-itemDate">
-                      <time datetime="2021-04">2021.April</time> -
-                      <time datetime="2021-06">June</time>
-                    </p>
-                    <p class="event-itemName">チーム開発</p>
-                  </div>
-                </li>
-              </ul>
+            <div id="js-eventSlide" class="splide event-slide">
+              <div class="splide__track event-slideTrack">
+                <ul class="splide__list event-list">
+                  <li class="splide__slide event-item">
+                    <figure class="event-itemImage">
+                      <img src="./assets/img/img-event01.jpg" alt="" />
+                    </figure>
+                    <div class="event-itemBody">
+                      <p class="event-itemDate">
+                        <time datetime="2021-04">2021.April</time>
+                      </p>
+                      <p class="event-itemName">入学式</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide event-item">
+                    <figure class="event-itemImage">
+                      <img src="./assets/img/img-event02.jpg" alt="" />
+                    </figure>
+                    <div class="event-itemBody">
+                      <p class="event-itemDate">
+                        <time datetime="2021-03">2021.Mar</time>
+                      </p>
+                      <p class="event-itemName">軽井沢旅行</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide event-item">
+                    <figure class="event-itemImage">
+                      <img src="./assets/img/img-event03.jpg" alt="" />
+                    </figure>
+                    <div class="event-itemBody">
+                      <p class="event-itemDate">
+                        <time datetime="2021-04">2021.April</time>
+                      </p>
+                      <p class="event-itemName">オープン講演会</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide event-item">
+                    <figure class="event-itemImage">
+                      <img src="./assets/img/img-event04.jpg" alt="" />
+                    </figure>
+                    <div class="event-itemBody">
+                      <p class="event-itemDate">
+                        <time datetime="2021-04">2021.April</time> -
+                        <time datetime="2021-06">June</time>
+                      </p>
+                      <p class="event-itemName">チーム開発</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -204,107 +206,109 @@
           </div>
           <div class="section-body">
             <div class="container">
-              <div class="daily-slide">
-                <ul class="daily-list">
-                  <li class="daily-item">
-                    <figure class="daily-itemImage">
-                      <img src="./assets/img/img-daily01.jpg" alt="" />
-                    </figure>
-                    <div class="daily-itemBody">
-                      <h2 class="daily-title">
-                        <span class="daily-titleNumber">01</span
-                        ><span class="daily-titleText">ミートアップ</span>
-                      </h2>
-                      <ul class="daily-outline">
-                        <li class="daily-outlineItem">毎週月曜日 19:30～22:30</li>
-                        <li class="daily-outlineItem">全員参加</li>
-                      </ul>
-                      <div class="daily-description">
-                        <p>
-                          全体ミーティングです。<br />各局からのお知らせや、講演会など目白押しです。
-                        </p>
+              <div id="js-dailySlide" class="splide daily-slide">
+                <div class="splide__track">
+                  <ul class="splide__list daily-list">
+                    <li class="splide__slide daily-item">
+                      <figure class="daily-itemImage">
+                        <img src="./assets/img/img-daily01.jpg" alt="" />
+                      </figure>
+                      <div class="daily-itemBody">
+                        <h2 class="daily-title">
+                          <span class="daily-titleNumber">01</span
+                          ><span class="daily-titleText">ミートアップ</span>
+                        </h2>
+                        <ul class="daily-outline">
+                          <li class="daily-outlineItem">毎週月曜日 19:30～22:30</li>
+                          <li class="daily-outlineItem">全員参加</li>
+                        </ul>
+                        <div class="daily-description">
+                          <p>
+                            全体ミーティングです。<br />各局からのお知らせや、講演会など目白押しです。
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="daily-item">
-                    <figure class="daily-itemImage">
-                      <img src="./assets/img/img-daily02.jpg" alt="" />
-                    </figure>
-                    <div class="daily-itemBody">
-                      <h2 class="daily-title">
-                        <span class="daily-titleNumber">02</span
-                        ><span class="daily-titleText">縦もく</span>
-                      </h2>
-                      <ul class="daily-outline">
-                        <li class="daily-outlineItem">週1回 2時間</li>
-                      </ul>
-                      <div class="daily-description">
-                        <p>
-                          期生関係なくzoomを繋ぎ、わからないところを先輩に質問できます。わかるまで丁寧に教えてくれます。
-                        </p>
+                    </li>
+                    <li class="splide__slide daily-item">
+                      <figure class="daily-itemImage">
+                        <img src="./assets/img/img-daily02.jpg" alt="" />
+                      </figure>
+                      <div class="daily-itemBody">
+                        <h2 class="daily-title">
+                          <span class="daily-titleNumber">02</span
+                          ><span class="daily-titleText">縦もく</span>
+                        </h2>
+                        <ul class="daily-outline">
+                          <li class="daily-outlineItem">週1回 2時間</li>
+                        </ul>
+                        <div class="daily-description">
+                          <p>
+                            期生関係なくzoomを繋ぎ、わからないところを先輩に質問できます。わかるまで丁寧に教えてくれます。
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="daily-item">
-                    <figure class="daily-itemImage">
-                      <img src="./assets/img/img-daily03.jpg" alt="" />
-                    </figure>
-                    <div class="daily-itemBody">
-                      <h2 class="daily-title">
-                        <span class="daily-titleNumber">03</span
-                        ><span class="daily-titleText">横もく</span>
-                      </h2>
-                      <ul class="daily-outline">
-                        <li class="daily-outlineItem">週1回 3時間</li>
-                      </ul>
-                      <div class="daily-description">
-                        <p>
-                          同期と3～4人一組で学習しながら、わからないところを共有、質問できます。オフラインで集合したり、共にハッカソンに挑んだりします。
-                        </p>
+                    </li>
+                    <li class="splide__slide daily-item">
+                      <figure class="daily-itemImage">
+                        <img src="./assets/img/img-daily03.jpg" alt="" />
+                      </figure>
+                      <div class="daily-itemBody">
+                        <h2 class="daily-title">
+                          <span class="daily-titleNumber">03</span
+                          ><span class="daily-titleText">横もく</span>
+                        </h2>
+                        <ul class="daily-outline">
+                          <li class="daily-outlineItem">週1回 3時間</li>
+                        </ul>
+                        <div class="daily-description">
+                          <p>
+                            同期と3～4人一組で学習しながら、わからないところを共有、質問できます。オフラインで集合したり、共にハッカソンに挑んだりします。
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="daily-item">
-                    <figure class="daily-itemImage">
-                      <img src="./assets/img/img-daily04.jpg" alt="" />
-                    </figure>
-                    <div class="daily-itemBody">
-                      <h2 class="daily-title">
-                        <span class="daily-titleNumber">04</span
-                        ><span class="daily-titleText">スペもく</span>
-                      </h2>
-                      <ul class="daily-outline">
-                        <li class="daily-outlineItem">週1回 1時間</li>
-                        <li>自由参加</li>
-                      </ul>
-                      <div class="daily-description">
-                        <p>
-                          メンターさんからのアドバイスを受けることができます。<br />毎回得る知識が多く、とてもありがたい機会です。
-                        </p>
+                    </li>
+                    <li class="splide__slide daily-item">
+                      <figure class="daily-itemImage">
+                        <img src="./assets/img/img-daily04.jpg" alt="" />
+                      </figure>
+                      <div class="daily-itemBody">
+                        <h2 class="daily-title">
+                          <span class="daily-titleNumber">04</span
+                          ><span class="daily-titleText">スペもく</span>
+                        </h2>
+                        <ul class="daily-outline">
+                          <li class="daily-outlineItem">週1回 1時間</li>
+                          <li>自由参加</li>
+                        </ul>
+                        <div class="daily-description">
+                          <p>
+                            メンターさんからのアドバイスを受けることができます。<br />毎回得る知識が多く、とてもありがたい機会です。
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="daily-item">
-                    <figure class="daily-itemImage">
-                      <img src="./assets/img/img-daily05.jpg" alt="" />
-                    </figure>
-                    <div class="daily-itemBody">
-                      <h2 class="daily-title">
-                        <span class="daily-titleNumber">05</span
-                        ><span class="daily-titleText">飯もく</span>
-                      </h2>
-                      <ul class="daily-outline">
-                        <li class="daily-outlineItem">不定期 3時間</li>
-                        <li>全員参加</li>
-                      </ul>
-                      <div class="daily-description">
-                        <p>
-                          ご飯を食べながら作業をします。表参道の美味しいお店をたくさん発見できることが楽しいです！
-                        </p>
+                    </li>
+                    <li class="splide__slide daily-item">
+                      <figure class="daily-itemImage">
+                        <img src="./assets/img/img-daily05.jpg" alt="" />
+                      </figure>
+                      <div class="daily-itemBody">
+                        <h2 class="daily-title">
+                          <span class="daily-titleNumber">05</span
+                          ><span class="daily-titleText">飯もく</span>
+                        </h2>
+                        <ul class="daily-outline">
+                          <li class="daily-outlineItem">不定期 3時間</li>
+                          <li>全員参加</li>
+                        </ul>
+                        <div class="daily-description">
+                          <p>
+                            ご飯を食べながら作業をします。表参道の美味しいお店をたくさん発見できることが楽しいです！
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -412,6 +416,6 @@
 
   </body>
 
-  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/splide.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </html>
