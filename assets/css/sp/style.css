@@ -253,9 +253,16 @@
   /**
   * 2.6 - 日常生活
   */
-  .daily-list {
+
+  /* .daily-list {
     flex-direction: row;
     gap: 40px;
+  }
+  */
+
+  .daily-list {
+    flex-direction: row;
+    gap: initial;
   }
 
   .daily-item {
@@ -303,8 +310,7 @@
 
   .daily-outline {
     margin-top: 20px;
-  } 
-
+  }  
 
   /**
   * 2.7 - 公式LINE
