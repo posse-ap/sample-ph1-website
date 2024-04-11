@@ -210,6 +210,11 @@ body {
   line-height: 1;
 }
 
+.footer-logo img {
+  width: 202px;
+  height: 39px;
+}
+
 .footer-corporateLink {
   color: var(--gray-dark-color);
   font-size: 14px;
