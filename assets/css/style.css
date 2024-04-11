@@ -124,6 +124,7 @@ body {
 .header {
   display: flex; 
   align-items: center; 
+  justify-content: space-between;
   height: 80px;
   position: fixed;
   top: 0;
@@ -142,7 +143,6 @@ body {
 .header-nav {
   display: flex;
   align-items: center;
-  margin-left: auto;
   gap: 48px;
 }
 
