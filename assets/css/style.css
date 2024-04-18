@@ -154,8 +154,6 @@ body {
 .header-navLink {
   color: var(--primary-color);
   font-weight: bold;
-  line-height: 1.8;
-  letter-spacing: .1em;
   font-size: 14px;
 }
 
@@ -206,25 +204,13 @@ body {
 }
 
 .footer-logo {
-  width: 200px;
-  line-height: 1;
+  width: 148px;
 }
 
 .footer-corporateLink {
   color: var(--gray-dark-color);
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
 } 
-
-.footer-corporateLink::after {
-  content: '';
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: url(../img/icon-external-link.svg) center center / contain no-repeat;
-}
 
 .footer-snsList {
   display: flex;
@@ -237,16 +223,12 @@ body {
 }
 
 .footer-copyright {
-  text-align: center;
   margin-top: 24px;
-  border-top: solid 1px var(--gray-light-color);
-  color: var(--gray-color);
-  font-family: var(--english-font);
-  letter-spacing: .1em;
-  line-height: 1.5;
-  font-size: 10px;
   padding: 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+  color: var(--gray-color);
+  font-size: 10px;
+  border-top: solid 1px var(--gray-light-color);
 } 
 
 /**
