@@ -424,6 +424,10 @@ body {
 /**
  * 2.7 - 公式LINE
  */
+.cta-title img {
+  width: 40px;
+  height: 40px;
+}
 
 /* 3.0 - Animation, JavaScript Object */
 /* ============================================ */
