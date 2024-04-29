@@ -68,8 +68,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: solid 1px #eeeeee;
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #EEEEEE;
   padding: 0 24px;
   z-index: 10000;
   transition: background-color 0.3s linear;
@@ -90,7 +90,7 @@
 }
 
 .header-navLink {
-  color: #0071bc;
+  color: #0071BC;
   font-weight: bold;
   font-size: 14px;
 }
