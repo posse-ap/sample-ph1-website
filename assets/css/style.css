@@ -329,16 +329,15 @@ body {
  * 2.6 - 日常生活
  */
 .daily-list {
-  padding-top: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
   gap: 120px;
 }
 
 .daily-item {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   background-color: #F7F9FB;
   border-radius: 10px;
