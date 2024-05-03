@@ -50,6 +50,7 @@
  */
 body {
   color: #333333;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /**
@@ -95,6 +96,7 @@ body {
   line-height: 1.5;
   margin-top: 8px;
   color: #0071bc;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* 2.0 - Sections */
@@ -193,6 +195,7 @@ body {
   color: #adadad;
   font-size: 10px;
   border-top: solid 1px #eeeeee;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /**
@@ -244,6 +247,7 @@ body {
   display: flex;
   gap: 4px;
   align-items: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .mainvisual-scroll::before {
@@ -315,6 +319,7 @@ body {
   color: #ffffff;
   padding: 0 12px;
   border-radius: 5em;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .event-itemName {
@@ -336,7 +341,7 @@ body {
 
 .daily-item {
   display: flex;
-  background-color: #F7F9FB;
+  background-color: #f7f9fb;
   border-radius: 10px;
   min-height: 324px;
 }
@@ -368,7 +373,7 @@ body {
 
 .daily-item:nth-of-type(even) .daily-itemImage {
   margin-left: -40px;
-} 
+}
 
 .daily-itemBody {
   padding: 48px 56px;
@@ -379,8 +384,8 @@ body {
   font-weight: bold;
   font-size: 58px;
   line-height: 1;
-  letter-spacing: .05em;
-  color: #0071BC;
+  color: #0071bc;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .daily-titleText {
@@ -398,7 +403,7 @@ body {
 }
 
 .daily-outlineItem::before {
-  content: '';
+  content: "";
   display: block;
   width: 24px;
   height: 24px;
@@ -419,14 +424,62 @@ body {
   font-size: 14px;
   line-height: 1.8;
   margin-top: 12px;
-} 
+}
 
 /**
  * 2.7 - 公式LINE
  */
+.cta {
+  background: url(../img/bg-cta.jpg) center center / cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 40px 24px 52px;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
 .cta-title img {
   width: 40px;
   height: 40px;
+}
+
+.cta-content {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.cta-footer {
+  margin-top: 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  width: 315px;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0071BC;
+  line-height: 1.5;
+  background-color: #FFFFFF;
+  border: solid 1px #0071BC;
+  border-radius: 50px;
+}
+
+.cta-button:hover {
+  background-color: #0071BC;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 /* 3.0 - Animation, JavaScript Object */
