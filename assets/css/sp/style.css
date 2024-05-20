@@ -113,6 +113,18 @@
   /**
   * 2.7 - 公式LINE
   */
+  .cta {
+    background-image: url(../../img/sp/bg-cta.jpg);
+    padding: 40px 12px 52px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+  }
+
+  .cta-content {
+    text-align: left;
+  }
 
   /* 3.0 - Animation, JavaScript Object */
   /* ============================================ */
