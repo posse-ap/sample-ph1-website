@@ -51,8 +51,8 @@
   }
 
   .title-en {
-  font-size: 10px;
-  margin-top: 4px;
+    font-size: 10px;
+    margin-top: 4px;
   }
 
   /* 2.0 - Sections */
@@ -92,6 +92,14 @@
 
   .mainvisual-scroll {
     display: none;
+  }
+
+  .section {
+    margin-top: 48px;
+  }
+
+  .section-body {
+    margin-top: 20px;
   }
 
   /**
