@@ -107,6 +107,7 @@
   * 2.5 - イベント
   */
   .event-list {
+    overflow: auto;
     justify-content: flex-start;
   }
 
@@ -114,8 +115,58 @@
   * 2.6 - 日常生活
   */
   .daily-list {
+    overflow: auto;
     flex-direction: row;
     gap: 40px;
+    padding: 0;
+  }
+
+  .daily-item {
+    flex-direction: column;
+    width: 320px;
+    flex-shrink: 0;
+  }
+
+  .daily-item:nth-of-type(odd) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  
+  .daily-item:nth-of-type(even) {
+    margin-left: 0;
+  }
+
+  .daily-itemImage {
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 200px;
+  }
+
+  .daily-item:nth-of-type(odd) .daily-itemImage {
+    margin-right: 0;
+  }
+  
+  .daily-item:nth-of-type(even) .daily-itemImage {
+    margin-left: 0;
+  }
+
+  .daily-itemBody {
+    width: 100%;
+    padding: 20px 24px;
+  }
+  
+  .daily-titleNumber {
+    font-size: 40px;
+  }
+  
+  .daily-titleText {
+    font-size: 20px;
+    margin-left: 12px;
+  }
+  
+  .daily-outline {
+    margin-top: 20px;
   }
 
   /**
