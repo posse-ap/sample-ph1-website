@@ -105,6 +105,9 @@
   /**
   * 2.5 - イベント
   */
+  .event-list {
+    justify-content: flex-start;
+  }
 
   /**
   * 2.6 - 日常生活
