@@ -62,6 +62,46 @@
   /**
   * 2.1 - ヘッダー
   */
+  .header {
+    padding: 0 12px;
+    height: 48px;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-button {
+    width: 42px;
+    height: 42px;
+    position: relative;
+  }
+
+  .header-buttonLine {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0071BC;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-buttonLine:nth-of-type(1) {
+    top: 13px;
+  }
+  
+  .header-buttonLine:nth-of-type(2) {
+    top: 20px;
+  }
+  
+  .header-buttonLine:nth-of-type(3) {
+    top: 27px;
+  }
 
   /**
   * 2.2 - フッター
