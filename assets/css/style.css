@@ -278,10 +278,6 @@ body {
 /**
  * 2.5 - イベント
  */
-.event-slide {
-  overflow: auto;
-}
-
 .event-list {
   display: flex;
   justify-content: center;
