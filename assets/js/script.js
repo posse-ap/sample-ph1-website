@@ -24,3 +24,9 @@ testTitle.className = 'title-ja';
 let daily = document.getElementById('daily');
 testH2.appendChild(testTitle);
 daily.appendChild(testH2);
+
+// 問題6
+let hamburger = document.getElementById('header-button');
+hamburger.addEventListener('click', function() {
+  console.log('ハンバーガーメニューが開きます。');
+});
