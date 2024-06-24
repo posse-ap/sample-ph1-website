@@ -71,10 +71,6 @@
     width: 100px;
   }
 
-  .header-nav {
-    display: none;
-  }
-
   .header-button {
     width: 42px;
     height: 42px;
@@ -101,6 +97,10 @@
   
   .header-buttonLine:nth-of-type(3) {
     top: 27px;
+  }
+
+  .header-nav {
+    display: none;
   }
 
   /**
