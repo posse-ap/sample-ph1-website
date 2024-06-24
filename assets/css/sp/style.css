@@ -71,10 +71,6 @@
     width: 100px;
   }
 
-  .header-nav {
-    display: none;
-  }
-
   .header-button {
     width: 42px;
     height: 42px;
@@ -101,6 +97,26 @@
   
   .header-buttonLine:nth-of-type(3) {
     top: 27px;
+  }
+
+  /* .header-nav {
+    display: none;
+  } */
+
+  .header-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F7F9FB;
+    flex-direction: column;
+    gap: 0;
+    padding: 120px 24px 40px;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* transition: visibility .3s linear, opacity .3s linear; */
   }
 
   /**
