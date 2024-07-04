@@ -134,6 +134,10 @@ body {
   font-size: 14px;
 }
 
+.header-info {
+  display: none;
+}
+
 .header-snsList {
   display: flex;
   gap: 24px;

@@ -69,6 +69,7 @@
 
   .header-logo {
     width: 100px;
+    z-index: 1;
   }
 
   .header-button {
@@ -133,6 +134,10 @@
   .header-corporateLink {
     color: #666666;
     font-size: 14px;
+  }
+
+  .header-snsList {
+    margin-top: 24px;
   }
 
   /**
