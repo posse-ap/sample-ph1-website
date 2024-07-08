@@ -109,7 +109,6 @@ body {
   border-bottom: solid 1px #EEEEEE;
   padding: 0 24px;
   z-index: 10000;
-  transition: background-color 0.3s linear;
 }
 
 .header-logo {
