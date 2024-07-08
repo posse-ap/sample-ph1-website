@@ -113,6 +113,7 @@ body {
   z-index: 10000;
   transition: background-color 0.3s linear;
 }
+
 .header-logo {
   width: 148px;
 }
