@@ -121,6 +121,19 @@ body {
 
 .header-logo {
   width: 148px;
+  transition: filter 0.3s linear;
+}
+
+.header.is-transparent:not(.is-open) .header-logo {
+  filter: brightness(10);
+}
+
+.header.is-transparent:not(.is-open) .header-navLink {
+  color: #FFFFFF;
+}
+
+.header.is-transparent:not(.is-open) .header-snsLink {
+  filter: brightness(10);
 }
 
 .header-nav {
@@ -138,6 +151,7 @@ body {
   color: #0071BC;
   font-weight: bold;
   font-size: 14px;
+  transition: color 0.3s linear;
 }
 
 .header-info {

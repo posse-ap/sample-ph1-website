@@ -90,6 +90,10 @@
     transition: transform .3s linear, top .3s linear, opacity 0.3s linear;
   }
 
+  .header.is-transparent:not(.is-open) .header-buttonLine {
+    background-color: #FFFFFF;
+  }
+
   .header-buttonLine:nth-of-type(1) {
     top: 13px;
   }
