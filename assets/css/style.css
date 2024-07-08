@@ -113,6 +113,12 @@ body {
   z-index: 10000;
   transition: background-color 0.3s linear;
 }
+
+.header.is-transparent {
+  background-color: transparent;
+  border: none;
+}
+
 .header-logo {
   width: 148px;
 }
