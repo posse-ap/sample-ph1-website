@@ -217,9 +217,8 @@
   * 2.6 - 日常生活
   */
   .daily-list {
-    overflow: auto;
     flex-direction: row;
-    gap: 40px;
+    gap: initial;
     padding: 0;
   }
 

@@ -62,6 +62,7 @@ body {
 
 .section-body {
   margin-top: 40px;
+  overflow: hidden;
 }
 
 .section-lead {
@@ -344,10 +345,13 @@ body {
 /**
  * 2.6 - 日常生活
  */
-.daily-list {
+.daily-slide {
   max-width: 980px;
   margin: 0 auto;
   padding: 40px 24px 0;
+}
+
+.daily-list {
   display: flex;
   flex-direction: column;
   gap: 120px;

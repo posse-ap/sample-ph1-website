@@ -18,7 +18,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// スライダー
 // オプションで利用する固定値の設定
 const cardWidth = 320;
 const padding = 28;
@@ -42,5 +41,21 @@ const eventSlideOptions = {
     }
   }
 }
+const dailySlideOptions = {
+  type: 'loop',
+  gap: '40px',
+  padding: {
+    right: padding,
+    left : padding,
+  },
+  destroy: true,
+  breakpoints: {
+    768: {
+      destroy: false
+    }
+  }
+}
 
+// スライダーの初期化
 new Splide('#js-eventSlide', eventSlideOptions).mount();
+new Splide('#js-dailySlide', dailySlideOptions).mount();
