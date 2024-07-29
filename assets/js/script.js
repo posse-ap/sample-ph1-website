@@ -17,3 +17,30 @@ window.addEventListener("scroll", () => {
     header.classList.add("is-transparent");
   }
 });
+
+// スライダー
+// オプションで利用する固定値の設定
+const cardWidth = 320;
+const padding = 28;
+const gap = 40;
+
+// オプションの設定
+const eventSlideOptions = {
+  type: 'loop',
+  gap: '40px',
+  width: cardWidth * 3 + padding * 2 + gap * 2,
+  perPage: 3,
+  padding: {
+    right: padding,
+    left : padding,
+  },
+  pagination: false,
+  breakpoints: {
+    768: {
+      pagination: true,
+      perPage: 1,
+    }
+  }
+}
+
+new Splide('#js-eventSlide', eventSlideOptions).mount();
