@@ -299,7 +299,7 @@ body {
  * 2.5 - イベント
  */
 .event-track {
-  overflow: scroll !important;
+  overflow: visible !important;
 }
 
 .event-slide {
