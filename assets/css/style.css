@@ -300,7 +300,7 @@ body {
  * 2.5 - イベント
  */
 .event-track {
-  overflow: visible !important;
+  overflow: visible;
 }
 
 .event-slide {
@@ -358,7 +358,7 @@ body {
 
 /* スライダー適用時のスタイルを上書き */
 .splide.is-initialized:not(.is-active) .daily-list {
-  display: flex !important;
+  display: flex;
 }
 
 .daily-item {
